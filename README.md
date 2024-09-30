@@ -1,4 +1,4 @@
-# Comp3000Project Harry Ormandy
+# Comp3000 Project - Harry Ormandy
 ## This Repository is for storing the files related to the final year project
 
 ### Requirements Trello: 
