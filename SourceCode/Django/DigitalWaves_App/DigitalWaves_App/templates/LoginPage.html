@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>DigitalWaves Login</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f8f9fa;
+    }
+
+    .login-container {
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        width: 350px;
+    }
+
+        .login-container img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .login-container h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .login-container input {
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            font-size: 20px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            .login-container button:hover {
+                background-color: #0056b3;
+            }
+
+        .login-container a {
+            font-size: 12px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            .login-container a:hover {
+                text-decoration: underline;
+            }
+</style>
+<body>
+    <div class="login-container">
+        <img src="Logo.png" alt="DigitalWaves Logo" width="100">
+        <h1>Welcome To DigitalWaves</h1>
+        <form method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Confirm</button>
+        </form>
+        <a href="{% url 'Register' %}">
+            <button type="button" Register Your Account</button>
+
+        </a>
+    </div>
+
+
+
+</body>
+</html>
