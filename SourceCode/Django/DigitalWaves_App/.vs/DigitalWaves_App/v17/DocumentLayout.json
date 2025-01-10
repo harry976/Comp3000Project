@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\LoginPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\templates\\LoginPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\RegistrationPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\templates\\RegistrationPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\LoginPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\templates\\LoginPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\news_results.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -54,50 +54,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LoginPage.html",
               "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\LoginPage.html",
               "RelativeDocumentMoniker": "DigitalWaves_App\\templates\\LoginPage.html",
               "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\LoginPage.html",
               "RelativeToolTip": "DigitalWaves_App\\templates\\LoginPage.html",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAFEAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAgwGIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-01-09T12:57:11.525Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "RegistrationPage.html",
               "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\RegistrationPage.html",
               "RelativeDocumentMoniker": "DigitalWaves_App\\templates\\RegistrationPage.html",
               "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\RegistrationPage.html",
               "RelativeToolTip": "DigitalWaves_App\\templates\\RegistrationPage.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwBUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-01-09T12:57:05.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "settings.py",
               "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\settings.py",
               "RelativeDocumentMoniker": "DigitalWaves_App\\settings.py",
               "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\settings.py",
               "RelativeToolTip": "DigitalWaves_App\\settings.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAwHgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2024-12-17T13:52:27.714Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "urls.py",
               "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\urls.py",
               "RelativeDocumentMoniker": "DigitalWaves_App\\urls.py",

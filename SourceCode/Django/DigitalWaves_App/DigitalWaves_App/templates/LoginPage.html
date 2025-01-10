@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿{% load static %}
+
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -22,56 +24,63 @@
         border-radius: 10px;
         background-color: white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        width: 350px;
+        width: 400px;
     }
 
-        .login-container img {
-            width: 100px;
-            margin-bottom: 20px;
-        }
+    .login-container img {
+        width: 100px;
+        margin-bottom: 20px;
+    }
 
-        .login-container h1 {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
+    .login-container h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
 
-        .login-container input {
-            width: 90%;
-            padding: 5px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 2px;
-            font-size: 20px;
-        }
+    .login-container input {
+        width: 90%;
+        padding: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        font-size: 20px;
+    }
 
         .login-container button {
-            width: 100%;
+            width: 30%;
             padding: 10px;
             background-color: #007bff;
             border: none;
             border-radius: 5px;
+            margin-bottom: 15px;
             color: white;
             font-size: 16px;
             cursor: pointer;
         }
 
-            .login-container button:hover {
-                background-color: #0056b3;
-            }
+    .login-container button:hover {
+        background-color: #0056b3;
+    }
 
-        .login-container a {
-            font-size: 12px;
-            color: #007bff;
-            text-decoration: none;
-        }
+    .login-container a {
+        font-size: 12px;
+        color: #007bff;
+        text-decoration: none;
+    }
 
-            .login-container a:hover {
-                text-decoration: underline;
-            }
+    .login-container a:hover {
+        text-decoration: underline;
+    }
+
+    .login-container .RegistrationButton {
+        color: black;
+        background-color: white;
+        width: 200px;
+    }
 </style>
 <body>
     <div class="login-container">
-        <img src="Logo.png" alt="DigitalWaves Logo" width="100">
+        <img src="{% static 'Logo.png' %}" alt="DigitalWaves Logo" width="100">
         <h1>Welcome To DigitalWaves</h1>
         <form method="post">
             <input type="text" name="username" placeholder="Username" required>
@@ -79,7 +88,7 @@
             <button type="submit">Confirm</button>
         </form>
         <a href="{% url 'Register' %}">
-            <button type="button" Register Your Account</button>
+            <button type="button" class="RegistrationButton">Register Your Account</button>
 
         </a>
     </div>
