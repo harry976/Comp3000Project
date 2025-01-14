@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>DigitalWaves DataForm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        .FormContainer {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 900px;
+            position: relative;
+        }
+
+            .FormContainer h1 {
+                margin-bottom: 10px;
+            }
+
+            .FormContainer h2 {
+                font-size: 16px;
+                color: #555;
+                margin-bottom: 20px;
+            }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box; 
+        }
+
+        
+        .form-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap; 
+            flex-grow: 1;
+        }
+
+        .RequiredForm, .OptionalForm {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px;
+            box-sizing: border-box; 
+        }
+
+        .RequiredForm {
+            border-right: 2px solid #ccc; 
+        }
+
+            .RequiredForm h3, .OptionalForm h3 {
+                text-align: center;
+                font-size: 18px;
+                margin-bottom: 10px;
+                color: black;
+            }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            align-self: flex-end;
+            /*needs to be moved to the bottom right*/
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="FormContainer">
+        <h1>Information Wizard</h1>
+        <h2>
+            This information will be conveyed to vendors to provide you with the information available
+            about you online. We will never share your information outside of the vendors outlined in the ToS agreement.
+            The information will be secure in accordance with the 3rd party ToS agreements.
+        </h2>       
+        <form method="post" action="{% url 'DataForm' %}">
+            {% csrf_token %}
+            <div class="form-wrapper">                               
+                <div class="RequiredForm">
+                    <h3>Required</h3>
+                    <input type="text" name="Name" placeholder="Name" required>
+                    <input type="date" name="DOB" placeholder="Date of Birth" required>
+                    <input type="checkbox" name="Married" placeholder="Married?" required>
+                    <input type="email" name="EmailAddress" placeholder="Email Address" required>
+                    <input type="number" name="PhoneNumber" placeholder="Phone Number" required>
+                </div>             
+                <div class="OptionalForm">
+                    <h3>Optional</h3>
+                    <input type="text" name="Address" placeholder="Address">
+                    <input type="text" name="OtherName" placeholder="Other Name">
+                    <input type="text" name="FacebookID" placeholder="Facebook Username">
+                    <input type="text" name="TwitterID" placeholder="Twitter Username">
+                    <input type="checkbox" name="CriminalRecord" placeholder="Criminal Record?">
+                    <input type="checkbox" name="Gender" placeholder="Gender">
+                    <input type="checkbox" name="OwnProperty?" placeholder="Property Owner?">
+                    <input type="text" name="LinkedInUsername" placeholder="LinkedIn Username">
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -99,6 +99,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+#login redirection - where the program will go after login
+LOGIN_REDIRECT_URL = '/home/'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

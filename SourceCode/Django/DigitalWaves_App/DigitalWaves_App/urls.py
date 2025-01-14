@@ -22,6 +22,8 @@ from django.contrib.auth.views import LoginView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('search-news/', views.search_news, name='search_news'),
-    path('login/', LoginView.as_view(template_name='LoginPage.html'), name='login'),
-    path('register/', LoginView.as_view(template_name='RegistrationPage.html'), name='Register'),
+    path('login/', LoginView.as_view(template_name='LoginPage.html'), name='Login'),
+    path('register/', views.RegistrationView, name='Register'),
+    path('home/', views.MainPage, name="MainPage"),
+    path('DataForm/', views.DataForm, name="DataForm"),
 ]
