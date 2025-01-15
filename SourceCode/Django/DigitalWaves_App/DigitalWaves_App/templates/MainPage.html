@@ -4,10 +4,185 @@
 <head>
     <meta charset="utf-8" />
     <title>DigitalWaves Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body>
-    <h1>Testing main page</h1>
-    
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8f9fa;
+        overflow: hidden;
+    }
 
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 2500px;
+        width: 100%;
+        padding: 20px;
+        height: 100vh;
+    }
+
+    .ScanSection, .ScoreSection {
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 50%;
+        border-radius: 10px;
+    }
+
+        .ScanSection h2, .ScoreSection h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 24px;
+            color: #333;
+        }
+
+    .ScanButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+        .ScanButton button {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            border: 2px solid #046A88;
+            font-size: 20px;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            .ScanButton button:hover {
+                background-color: #046A88;
+                color: white;
+                transform: scale(1.1);
+            }
+
+    .Results h3 {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    .DisplayScore {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .DisplayCircle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 4px solid #046A88;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: #f8f9fa;
+    }
+
+        .DisplayCircle span {
+            font-size: 36px;
+            font-weight: bold;
+            color: #046A88;
+        }
+
+        .DisplayCircle small {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            font-size: 14px;
+            color: #046A88;
+        }
+
+    .ScoreBreakdown h3 {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    #check {
+        display: none;
+    }
+    .checkbtn {
+        font-size: 30px;
+        color: #333;
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        cursor: pointer;
+    }
+    .SideMenu {
+        position: fixed;
+        left: -350px;
+        top: 0;
+        width: 350px;
+        height: 100%;
+        background-color: #e9ecef;
+        color: white;
+        transition: left 0.3s ease;
+    }
+
+    #check:checked ~ .SideMenu {
+        left: 0;
+    }
+</style>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+
+    <div class="SideMenu">
+        <label for="check" class="closebtn">&times;</label>
+        <u1>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Account Settings</a></li>
+            <li><a href="#">information Wizard</a></li>
+
+
+        </u1>
+        <a href="{% url 'Login' %}">
+            <button type="button" class="LogoutButton">Log Out</button>
+
+        </a>
+    </div>
+    <div class="container">
+        <div class="ScanSection">
+            <h2>Scan For Information</h2>
+            <div class="ScanButton">
+                <button>Start Scan</button>
+            </div>
+            <div class="Results">
+                <h3>Results</h3>
+            </div>
+        </div>
+        <div class="ScoreSection">
+            <h2>Check Your Score</h2>
+            <div class="DisplayScore">
+                <div class="DisplayCircle">
+                    <span>65</span>
+                    <small>/100</small>
+                </div>
+            </div>
+            <div class="ScoreBreakdown">
+                <h3>Score Breakdown</h3>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
