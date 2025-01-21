@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\DigitalWaves_App",
-    "\\DigitalWaves_App\\templates"
+    "\\DigitalWaves_App\\templates",
+    "\\static",
+    "\\static\\js"
   ],
   "SelectedNode": "\\DigitalWaves_App\\templates\\MainPage.html",
   "PreviewInSolutionExplorer": false

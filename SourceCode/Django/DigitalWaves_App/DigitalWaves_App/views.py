@@ -3,21 +3,22 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.http import JsonResponse
 
-def search_news(request):
-    user_name = "Boris Johnson"  # Replace with dynamic user input
+
+def FetchNews(request):
+    user_name = "Jeffrey Epstein"  # Replace with your database-driven value later
     api_key = "b80bd9a851964df5ba7e7bc052192429"
     url = f"https://newsapi.org/v2/everything?q={user_name}&apiKey={api_key}"
 
     try:
         response = requests.get(url)
         data = response.json()
-        articles = data.get('articles', [])
+        articles = [{'url': article['url']} for article in data.get('articles', []) if 'url' in article]
+        return JsonResponse({'articles': articles})
     except requests.exceptions.RequestException as e:
-        articles = []
         print(f"Error fetching news: {e}")
-
-    return render(request, 'news_results.html', {'articles': articles})
+        return JsonResponse({'error': 'Unable to fetch data'}, status=500)
 
 
 def MainPage(request):

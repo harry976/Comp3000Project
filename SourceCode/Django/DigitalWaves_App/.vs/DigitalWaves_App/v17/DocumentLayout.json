@@ -7,48 +7,20 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\templates\\MainPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\LoginPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\templates\\LoginPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchNews.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:static\\js\\FetchNews.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\LoginPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\templates\\LoginPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\DataForm.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\templates\\DataForm.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\RegistrationPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\templates\\RegistrationPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\news_results.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\templates\\news_results.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\manage.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:manage.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\wsgi.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\wsgi.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\asgi.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\asgi.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,39 +34,39 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DataForm.html",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\DataForm.html",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\templates\\DataForm.html",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\DataForm.html",
-              "RelativeToolTip": "DigitalWaves_App\\templates\\DataForm.html",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGQAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "LoginPage.html",
+              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\LoginPage.html",
+              "RelativeDocumentMoniker": "DigitalWaves_App\\templates\\LoginPage.html",
+              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\LoginPage.html",
+              "RelativeToolTip": "DigitalWaves_App\\templates\\LoginPage.html",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-01-14T11:55:41.992Z",
+              "WhenOpened": "2025-01-21T14:52:06.15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "urls.py",
               "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\urls.py",
               "RelativeDocumentMoniker": "DigitalWaves_App\\urls.py",
               "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\urls.py",
               "RelativeToolTip": "DigitalWaves_App\\urls.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2024-12-17T13:41:20.342Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "views.py",
               "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\views.py",
               "RelativeDocumentMoniker": "DigitalWaves_App\\views.py",
               "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\views.py",
               "RelativeToolTip": "DigitalWaves_App\\views.py",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2024-12-17T13:33:01.779Z",
               "EditorCaption": ""
@@ -107,108 +79,23 @@
               "RelativeDocumentMoniker": "DigitalWaves_App\\templates\\MainPage.html",
               "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\MainPage.html",
               "RelativeToolTip": "DigitalWaves_App\\templates\\MainPage.html",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJ4AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAE8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-01-09T13:30:57.715Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginPage.html",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\LoginPage.html",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\templates\\LoginPage.html",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\LoginPage.html",
-              "RelativeToolTip": "DigitalWaves_App\\templates\\LoginPage.html",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-01-09T12:57:11.525Z",
+              "DocumentIndex": 2,
+              "Title": "FetchNews.js",
+              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchNews.js",
+              "RelativeDocumentMoniker": "static\\js\\FetchNews.js",
+              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchNews.js",
+              "RelativeToolTip": "static\\js\\FetchNews.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-01-21T14:07:59.494Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "news_results.html",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\news_results.html",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\templates\\news_results.html",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\news_results.html",
-              "RelativeToolTip": "DigitalWaves_App\\templates\\news_results.html",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-12-17T13:43:26.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegistrationPage.html",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\RegistrationPage.html",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\templates\\RegistrationPage.html",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\RegistrationPage.html",
-              "RelativeToolTip": "DigitalWaves_App\\templates\\RegistrationPage.html",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-01-09T12:57:05.128Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "settings.py",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\settings.py",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\settings.py",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\settings.py",
-              "RelativeToolTip": "DigitalWaves_App\\settings.py",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAGYAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-12-17T13:52:27.714Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "wsgi.py",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\wsgi.py",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\wsgi.py",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\wsgi.py",
-              "RelativeToolTip": "DigitalWaves_App\\wsgi.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-12-17T13:32:33.43Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "manage.py",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\manage.py",
-              "RelativeDocumentMoniker": "manage.py",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\manage.py",
-              "RelativeToolTip": "manage.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-12-17T13:32:26.638Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "asgi.py",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\asgi.py",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\asgi.py",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\asgi.py",
-              "RelativeToolTip": "DigitalWaves_App\\asgi.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-01-09T12:33:58.279Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "__init__.py",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\__init__.py",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\__init__.py",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\__init__.py",
-              "RelativeToolTip": "DigitalWaves_App\\__init__.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-12-17T13:32:32.017Z"
             }
           ]
         }
