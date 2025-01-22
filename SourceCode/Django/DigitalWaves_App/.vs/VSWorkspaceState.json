@@ -6,6 +6,6 @@
     "\\static",
     "\\static\\js"
   ],
-  "SelectedNode": "\\DigitalWaves_App\\templates\\MainPage.html",
+  "SelectedNode": "\\DigitalWaves_App\\views.py",
   "PreviewInSolutionExplorer": false
 }

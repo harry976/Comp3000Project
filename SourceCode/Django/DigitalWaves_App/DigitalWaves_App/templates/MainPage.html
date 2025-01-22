@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     {% load static %}
     <script src="{% static 'js/FetchNews.js' %}"></script>
+    <script src="{% static 'js/HamburgerMenu.js' %}"></script>
 </head>
 <style>
     body {
@@ -59,7 +60,7 @@
             height: 300px;
             border-radius: 50%;
             background-color: #e9ecef;
-            border: 2px solid #046A88;
+            border: 4px solid #046A88;
             font-size: 20px;
             color: black;
             cursor: pointer;
@@ -189,7 +190,7 @@
         background-color: #e9ecef;
     }
     .closebtn {
-        font-size: 36px;
+        font-size: 40px;
         color: black;
         position: absolute;
         top: 1px;
@@ -207,12 +208,15 @@
 
     <div class="Overlay"></div>
 
-    <div class="SideMenu">
+    <div class="SideMenu" id="SideMenu">
         <label for="check" class="closebtn">&times;</label>
 
         <button type="button" class="HelpButton">Help</button>
         <button type="button" class="AccountSettingsButton">Account Settings</button>
-        <button type="button" class="InformationWizardButton">Information Wizard</button>
+        <a href="{% url 'DataForm' %}">
+            <button type="button" class="InformationWizardButton">Information Wizard</button>
+        </a>
+        
 
         <a href="{% url 'Login' %}">
             <button type="button" class="LogoutButton">Log Out</button>

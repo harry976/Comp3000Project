@@ -2,12 +2,13 @@ import requests
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import JsonResponse
-
+from .forms import UserInformationForm
 
 def FetchNews(request):
-    user_name = "Jeffrey Epstein"  # Replace with your database-driven value later
+    user_name = "David Beckham"  # Replace with the database value later
     api_key = "b80bd9a851964df5ba7e7bc052192429"
     url = f"https://newsapi.org/v2/everything?q={user_name}&apiKey={api_key}"
 
@@ -24,8 +25,23 @@ def FetchNews(request):
 def MainPage(request):
     return render(request, 'MainPage.html')
 
+
+@login_required
 def DataForm(request):
-    return render(request, "DataForm.html")
+    if request.method == 'POST':
+        UserDataForm = UserInformationForm(request.POST)
+
+        if UserDataForm.is_valid():
+            SaveUserForm = UserDataForm.save(commit=False)
+            SaveUserForm.user = request.user
+            SaveUserForm.save()
+
+            return redirect('LoginPage.html')
+    else:
+        UserDataForm = UserInformationForm()
+
+    return render(request, "DataForm.html", {'form': UserDataForm})
+
 
 def LoginView(request):
     if request.method == 'POST':
@@ -67,6 +83,7 @@ def RegistrationView(request):
         user.save()
 
         messages.success(request, "registration successful")
+        #this needs to change in order to log the user in already
         return redirect('DataForm')
     return render(request, 'RegistrationPage.html')
 

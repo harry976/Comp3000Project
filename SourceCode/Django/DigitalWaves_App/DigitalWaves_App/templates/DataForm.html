@@ -90,6 +90,20 @@
                 background-color: #0056b3;
             }
 
+        label{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        label span{
+            flex: 0 0 15px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-left: auto;
+        }
+
     </style>
 </head>
 <body>
@@ -107,7 +121,11 @@
                     <h3>Required</h3>
                     <input type="text" name="Name" placeholder="Name" required>
                     <input type="date" name="DOB" placeholder="Date of Birth" required>
-                    <input type="checkbox" name="Married" placeholder="Married?" required>
+                    <label>
+                        <span>Married:</span>
+                        <input type="checkbox" name="Married" required>
+                    </label>
+                    
                     <input type="email" name="EmailAddress" placeholder="Email Address" required>
                     <input type="number" name="PhoneNumber" placeholder="Phone Number" required>
                 </div>             
@@ -117,10 +135,20 @@
                     <input type="text" name="OtherName" placeholder="Other Name">
                     <input type="text" name="FacebookID" placeholder="Facebook Username">
                     <input type="text" name="TwitterID" placeholder="Twitter Username">
-                    <input type="checkbox" name="CriminalRecord" placeholder="Criminal Record?">
-                    <input type="checkbox" name="Gender" placeholder="Gender">
-                    <input type="checkbox" name="OwnProperty?" placeholder="Property Owner?">
                     <input type="text" name="LinkedInUsername" placeholder="LinkedIn Username">
+                    <label>
+                        <span>Criminal Record:</span>
+                        <input type="checkbox" name="CriminalRecord">
+                    </label>
+                    <label>
+                        <span>Property Owner:</span>
+                        <input type="checkbox" name="OwnProperty">
+                    </label>
+                    <label>
+                        <span>Sex:</span>
+                        <input type="radio" name="Sex" value="Male">Male
+                        <input type="radio" name="Sex" value="Female">Female
+                    </label>
                 </div>
             </div>
             <button type="submit">Submit</button>

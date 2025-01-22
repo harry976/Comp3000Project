@@ -1,0 +1,23 @@
+from django.db import models
+from django.contrib.auth.models import User
+
+class UserInformation(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)  # Link to the User model
+    Name = models.CharField(max_length=100)
+    DOB = models.DateField()  # Date of Birth
+    Married = models.BooleanField(default=False)
+    Email = models.EmailField()
+    PhoneNumber = models.CharField(max_length=15)
+
+    # Optional fields
+    Address = models.TextField(max_length=128, blank=True, null=True)
+    OtherName = models.CharField(max_length=100, blank=True, null=True)
+    FacebookID = models.CharField(max_length=100, blank=True, null=True)
+    TwitterID = models.CharField(max_length=100, blank=True, null=True)
+    LinkedinUsername = models.CharField(max_length=100, blank=True, null=True)
+    CriminalRecord = models.BooleanField(default=False, null=True)
+    OwnProperty = models.BooleanField(default=False, null=True)
+    Sex = models.CharField(max_length=6, choices=[('Male', 'Male'), ('Female', 'Female')], blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.user.username}'s Profile"
