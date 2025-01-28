@@ -6,9 +6,13 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import JsonResponse
 from .forms import UserInformationForm
+from .models import UserInformation
 
 def FetchNews(request):
-    user_name = "David Beckham"  # Replace with the database value later
+    user_info = UserInformation.objects.get(user=request.user)
+    full_name = user_info.Name
+    user_name = full_name
+    print(full_name)
     api_key = "b80bd9a851964df5ba7e7bc052192429"
     url = f"https://newsapi.org/v2/everything?q={user_name}&apiKey={api_key}"
 

@@ -2,9 +2,10 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class UserInformation(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)  # Link to the User model
+    #required fields
+    user = models.OneToOneField(User, on_delete=models.CASCADE)  # Link to the Auth User Database table
     Name = models.CharField(max_length=100)
-    DOB = models.DateField()  # Date of Birth
+    DOB = models.DateField()
     Married = models.BooleanField(default=False)
     Email = models.EmailField()
     PhoneNumber = models.CharField(max_length=15)
