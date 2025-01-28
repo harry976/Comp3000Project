@@ -1,6 +1,6 @@
 import requests
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -50,6 +50,12 @@ def DataForm(request):
     return render(request, "DataForm.html", {'form': UserDataForm})
 
 
+def LogoutView(request):
+    logout(request)
+    return redirect('Login')
+    
+
+
 def LoginView(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -88,6 +94,8 @@ def RegistrationView(request):
         #add data into the database
         user = User.objects.create_user(username=username, password=password)
         user.save()
+        logout(request)
+        login(request, user)
 
         messages.success(request, "registration successful")
         #this needs to change in order to log the user in already

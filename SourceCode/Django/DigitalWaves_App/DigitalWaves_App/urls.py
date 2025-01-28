@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('FetchNews/', views.FetchNews, name='FetchNews'),
     path('login/', LoginView.as_view(template_name='LoginPage.html'), name='Login'),
+    path('logout/', views.LogoutView, name='Logout'),
     path('register/', views.RegistrationView, name='Register'),
     path('home/', views.MainPage, name="MainPage"),
     path('DataForm/', views.DataForm, name="DataForm"),
