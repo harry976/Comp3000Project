@@ -22,21 +22,28 @@ def FetchNews(request):
         return JsonResponse({'error': 'Unable to fetch data'}, status=500)
 
 
+@login_required
 def MainPage(request):
     return render(request, 'MainPage.html')
 
 
 @login_required
 def DataForm(request):
+    print("entered view. success")
     if request.method == 'POST':
         UserDataForm = UserInformationForm(request.POST)
+        print("the method was POST. success")
 
         if UserDataForm.is_valid():
+            print("Form is valid. success")
             SaveUserForm = UserDataForm.save(commit=False)
             SaveUserForm.user = request.user
             SaveUserForm.save()
+            print("form is saved. success")
 
-            return redirect('LoginPage.html')
+            return redirect('MainPage')
+        else:
+            print(UserDataForm.errors)
     else:
         UserDataForm = UserInformationForm()
 
