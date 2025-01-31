@@ -25,6 +25,9 @@ urlpatterns = [
     path('login/', LoginView.as_view(template_name='LoginPage.html'), name='Login'),
     path('logout/', views.LogoutView, name='Logout'),
     path('register/', views.RegistrationView, name='Register'),
+    path('ChangeUsername/', views.ChangeUsernameView, name='ChangeUsername'),
+    path('ChangePassword/', views.ChangePasswordView, name='ChangePassword'),
+    path('DeleteAccount/', views.DeleteAccountView, name='DeleteAccount'),
     path('home/', views.MainPage, name="MainPage"),
     path('DataForm/', views.DataForm, name="DataForm"),
 ]

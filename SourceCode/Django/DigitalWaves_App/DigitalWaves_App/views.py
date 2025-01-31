@@ -102,9 +102,51 @@ def RegistrationView(request):
         login(request, user)
 
         messages.success(request, "registration successful")
-        #this needs to change in order to log the user in already
         return redirect('DataForm')
     return render(request, 'RegistrationPage.html')
+
+
+@login_required
+def ChangeUsernameView(request):
+    if request.method == 'POST':
+        Username = request.POST.get('ExistingUsername')
+        NewUsername = request.POST.get('NewUsername')
+        if Username == NewUsername:
+            messages.error(request, "New Username Must Be Different")
+            return render(request, "ChangeUsername.html")
+
+        if User.objects.filter(Username=Username).exists():
+            messages.error(request, "User already exists")
+            return render(request, "ChangeUsername.html")
+
+        #Overwrite Username in database  
+        #log user out
+        #confirm and redirect to login page     
+    return render(request, 'ChangeUsername.html')
+    
+
+@login_required
+def ChangePasswordView(request):
+    #retrieve old password and new passwords
+    #check if old password is same as new
+    #check if new passwords match
+    #update password in database
+    #log user out
+    #confirm and redirect to login page
+    
+    return render(request, 'ChangePassword.html')
+
+
+@login_required
+def DeleteAccountView(request):
+    #if Username and Password match user logged in
+    #delete user from database
+    #show confirm message
+    #redirect to login page
+
+    return render(request, 'DeleteAccount.html')
+
+
 
 
 

@@ -210,15 +210,17 @@
 
     <div class="SideMenu" id="SideMenu">
         <label for="check" class="closebtn">&times;</label>
-
         <button type="button" class="HelpButton">Help</button>
         <button type="button" class="AccountSettingsButton">Account Settings</button>
         <a href="{% url 'DataForm' %}">
             <button type="button" class="InformationWizardButton">Information Wizard</button>
         </a>
-        
-
-        <form method="POST" action="{% url 'Logout' %}">
+        <div id="AccountSettingsMenuURLs"
+             ChangeUsernameURL="{% url 'ChangeUsername' %}"
+             ChangePasswordURL="{% url 'ChangePassword' %}"
+             DeleteAccountURL="{% url 'DeleteAccount' %}">
+        </div>
+        <form method="POST" action="{% url 'Login' %}">
             {% csrf_token %}
             <button type="submit" class="LogoutButton">Log Out</button>
         </form>

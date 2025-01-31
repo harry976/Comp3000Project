@@ -36,13 +36,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /*HTML code for Account Settings page*/
     function LoadAccountSettingsMenu() {
+        let ChangeUsernameURL = "/ChangeUsername/";
+        let ChangePasswordURL = "/ChangePassword/";
+        let DeleteAccountURL = "/DeleteAccount/";
         SideMenuContent.innerHTML = `
         <label for="check" class="closebtn">&times</label>
         <h2>Account Settings</h2>
-        <button type="button" class="ChangeUsernameButton">Change Username</button>
-        <button type="button" class="ChangePasswordButton">Change Password</button>
+        <a href="${ChangeUsernameURL}">
+            <button type="button" class="ChangeUsernameButton">Change Username</button>
+        </a>
+        <a href="${ChangePasswordURL}">
+            <button type="button" class="ChangePasswordButton">Change Password</button>
+        </a>
+        <a href="${DeleteAccountURL}">
+            <button type="button" class="DeleteAccountButton">Delete Account</button>
+        </a
         <button type="button" class="DeleteOptionalInformationButton">Delete Optional Information</button>
-        <button type="button" class="DeleteAccountButton">Delete Account</button>
+
         <button class=BackButton id=BackButton>Back</button>
         `;
         /*calls the listener for the back button */
