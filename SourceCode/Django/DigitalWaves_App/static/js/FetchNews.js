@@ -20,6 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 resultsContainer.innerHTML = "<p>No results found.</p>";
             }
+            //force the tab to reload and display the contents upon scanning
+            const tabButton = document.querySelector("button[onclick*='News']");
+            if (tabButton) {
+                tabButton.click();
+            }
         } catch (error) {
             console.error("Error fetching news:", error);
             resultsContainer.innerHTML = "<p>Error fetching results.</p>";

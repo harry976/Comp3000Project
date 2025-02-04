@@ -8,6 +8,7 @@
     {% load static %}
     <script src="{% static 'js/FetchNews.js' %}"></script>
     <script src="{% static 'js/HamburgerMenu.js' %}"></script>
+    <script src="{% static 'js/TabSwitching.js' %}"></script>
 </head>
 <style>
     body {
@@ -199,6 +200,29 @@
         
     }
 
+    .ResultsTab {
+        background-color: lightgray;
+        border: none;
+        padding: 12px;
+        cursor: pointer;
+        border-radius: 8px 8px 0 0;
+    }
+        .ResultsTab.active {
+            background-color: #046A88;
+            color: white;
+            font-weight: bold;
+        }
+    .ResultsTabContent{
+        display: none;
+        padding: 12px;
+        border: 1px solid #ccc;
+    }
+    .ResultsTabs{
+        display: flex;
+        border-bottom: 2px solid #ddd;
+    }
+    
+
 </style>
 <body>
     <input type="checkbox" id="check">
@@ -233,16 +257,37 @@
             </div>
             <div class="Results">
                 <h3>Results</h3>
-                <ul>
-                    {% for article in articles %}
-                    <li>
-                        <a href="{{ article.url }}" target="_blank">
-                            {{ article.title }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
+                <div class="ResultsTabs">
+                    <button class="ResultsTab active" onclick="OpenTab(event,'News')">News</button>
+                    <button class="ResultsTab" onclick="OpenTab(event,'SocialMedia')">Social Media</button>
+                    <button class="ResultsTab" onclick="OpenTab(event,'DataBreaches')">Breaches</button>
+                    <button class="ResultsTab" onclick="OpenTab(event,'PropertyOwnership')">Property</button>
+                </div>
+                <div id="News" class="ResultsTabContent">
+                    <ul>
+                        {% for article in articles %}
+                        <li>
+                            <a href="{{ article.url }}" target="_blank">
+                                {{ article.title }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div id="SocialMedia" class="ResultsTabContent">
+                    <p>Social media reports will appear here</p>
+
+                </div>
+                <div id="DataBreaches" class="ResultsTabContent">
+                    <p>Data Breach reports will appear here</p>
+
+                </div>
+                <div id="PropertyOwnership" class="ResultsTabContent">
+                    <p>Property Ownership reports will appear here</p>
+
+                </div>
             </div>
+
         </div>
         <div class="ScoreSection">
             <h2>Check Your Score</h2>
