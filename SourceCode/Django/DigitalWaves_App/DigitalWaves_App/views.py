@@ -108,42 +108,60 @@ def RegistrationView(request):
 
 @login_required
 def ChangeUsernameView(request):
-    if request.method == 'POST':
-        Username = request.POST.get('ExistingUsername')
+    if request.method == 'POST': 
+        ExistingUsername = request.POST.get('ExistingUsername')
         NewUsername = request.POST.get('NewUsername')
-        if Username == NewUsername:
+        if request.user.username != ExistingUsername:
+            messages.error(request,"Existing Username does not match logged in account")
+            return render(request, "ChangeUsername.html")
+        if ExistingUsername == NewUsername:
             messages.error(request, "New Username Must Be Different")
             return render(request, "ChangeUsername.html")
-
-        if User.objects.filter(Username=Username).exists():
+        if User.objects.filter(username=NewUsername).exists():
             messages.error(request, "User already exists")
             return render(request, "ChangeUsername.html")
-
-        #Overwrite Username in database  
-        #log user out
-        #confirm and redirect to login page     
+        request.user.username = NewUsername
+        request.user.save()
+        messages.success(request, "Username changed successfully")
+        logout(request)
+        return redirect('Login')
     return render(request, 'ChangeUsername.html')
     
 
 @login_required
 def ChangePasswordView(request):
-    #retrieve old password and new passwords
-    #check if old password is same as new
-    #check if new passwords match
-    #update password in database
-    #log user out
-    #confirm and redirect to login page
-    
+    if request.method == 'POST':
+        ExistingPassword = request.POST.get("ExistingPassword")
+        NewPassword = request.POST.get("NewPassword")
+        ConfirmPassword = request.POST.get("ConfirmPassword")
+        if NewPassword != ConfirmPassword:
+            messages.error(request,"New Passwords Do Not Match")
+            return render(request, "ChangePassword.html")
+        if request.user.check_password(ExistingPassword) == False:
+            messages.error(request, "Existing Password Does Not Match Account")
+            return render(request, "ChangePassword.html")
+        request.user.set_password(NewPassword)
+        request.user.save()
+        logout(request)
+        messages.success(request,"Password Changed Successfully")
+        return redirect('Login')    
     return render(request, 'ChangePassword.html')
 
 
 @login_required
 def DeleteAccountView(request):
-    #if Username and Password match user logged in
-    #delete user from database
-    #show confirm message
-    #redirect to login page
-
+    if request.method == 'POST':
+        ConfirmUsername = request.POST.get("ConfirmUsername")
+        ConfirmPassword = request.POST.get("ConfirmPassword")
+        if request.user.username == ConfirmUsername:
+            if request.user.check_password(ConfirmPassword):
+                request.user.delete()
+                messages.success(request,"Account Deleted Successfully")
+                return redirect('Login')
+            messages.error(request,"Password Does Not Match Account")
+            return render (request, 'DeleteAccount.html')
+        messages.error(request,"Username Does Not Match Account")
+        return render(request, 'DeleteAccount.html')
     return render(request, 'DeleteAccount.html')
 
 

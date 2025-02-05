@@ -90,7 +90,7 @@
             {% endfor %}
         </ul>
         {% endif %}
-        <form method="post" action="{%url 'ChangeUsername' %}">
+        <form method="post" action="{%url 'DeleteAccount' %}">
             {% csrf_token %}
             <input type="text" name="ConfirmUsername" placeholder="Confirm Username" required>
             <input type="password" name="ConfirmPassword" placeholder="Confirm Password" required>
