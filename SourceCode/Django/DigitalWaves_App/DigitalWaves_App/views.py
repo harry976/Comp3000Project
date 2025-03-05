@@ -124,6 +124,26 @@ def FetchPwned(request):
     return JsonResponse({"UserPwnedData": UserPwnedData})
 
 @login_required
+def FetchGoogleFacebookLinkedin(request):
+    #retreive facebook username from database
+    UserInfo = UserInformation.objects.get(user=request.user)
+    UserFacebookID = UserInfo.FacebookID
+    UserLinkedinUsername = UserInfo.LinkedinUsername
+    #set credentials
+    SearchEngineID = "063b98e3f99a54fbf"
+    APIKey = "AIzaSyAThgldxT8lZolsc_oLaAXLL30DVCuIAmc"
+    #set URLs
+    URLsToQuery =[ f"site:facebook.com {UserFacebookID}", f"site:linkedin.com {UserLinkedinUsername}"]
+    GoogleResults = []
+    #make API call
+    for URL in URLsToQuery:
+        response = requests.get(f"https://www.googleapis.com/customsearch/v1?q={URL}&key={APIKey}&cx={SearchEngineID}")
+        data = response.json()
+        GoogleResults.extend(data["items"])
+    print("The results of the search are: ",GoogleResults)
+    return JsonResponse({"GoogleResults": GoogleResults})
+
+@login_required
 def MainPage(request):
     return render(request, 'MainPage.html')
 
@@ -149,6 +169,8 @@ def DataForm(request):
         UserDataForm = UserInformationForm()
 
     return render(request, "DataForm.html", {'form': UserDataForm})
+
+
 
 
 def LogoutView(request):
