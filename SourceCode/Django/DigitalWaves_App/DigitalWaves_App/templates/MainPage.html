@@ -9,6 +9,9 @@
     <script src="{% static 'js/FetchNews.js' %}"></script>
     <script src="{% static 'js/HamburgerMenu.js' %}"></script>
     <script src="{% static 'js/TabSwitching.js' %}"></script>
+    <script src="{% static 'js/FetchTwitterUsernames.js' %}"></script>
+    <script src="{% static 'js/FetchReddit.js' %}"></script>
+    <script src="{% static 'js/FetchGitHub.js' %}"></script>
 </head>
 <style>
     body {
@@ -275,7 +278,10 @@
                     </ul>
                 </div>
                 <div id="SocialMedia" class="ResultsTabContent">
-                    <p>Social media reports will appear here</p>
+                    <ul id="SocialMediaResults">
+
+                        <!-- add in display for reddit and github-->
+                    </ul>
 
                 </div>
                 <div id="DataBreaches" class="ResultsTabContent">

@@ -1,4 +1,9 @@
+import subprocess
 import requests
+import json 
+import os
+import asyncio
+import praw
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
@@ -8,23 +13,103 @@ from django.http import JsonResponse
 from .forms import UserInformationForm
 from .models import UserInformation
 
+
+
+
 def FetchNews(request):
     user_info = UserInformation.objects.get(user=request.user)
     full_name = user_info.Name
     user_name = full_name
-    print(full_name)
     api_key = "b80bd9a851964df5ba7e7bc052192429"
     url = f"https://newsapi.org/v2/everything?q={user_name}&apiKey={api_key}"
 
     try:
         response = requests.get(url)
         data = response.json()
-        articles = [{'url': article['url']} for article in data.get('articles', []) if 'url' in article]
+        articles = [{'title': article['title'], 'url': article['url']} for article in data.get('articles', []) if 'url' in article]
         return JsonResponse({'articles': articles})
     except requests.exceptions.RequestException as e:
         print(f"Error fetching news: {e}")
         return JsonResponse({'error': 'Unable to fetch data'}, status=500)
 
+##unused code - may impllement in the future
+@login_required
+async def SherlockSocialMedia(request):
+    SocialMediaProfiles=[]
+    #Retrieve User Data from database
+    UserInfo = UserInformation.objects.get(user=request.user)
+    SocialMediaUsernames=[UserInfo.TwitterID,UserInfo.FacebookID,UserInfo.LinkedinUsername]
+    SherlockPath = os.path.join(os.getcwd(), 'Sherlock', 'sherlock_project', 'sherlock.py')
+    #run sherlock for each username
+    for i in SocialMediaUsernames:
+        UsernameToSearch = i
+        print(UsernameToSearch)
+        SherlockScan = await asyncio.create_subprocess_exec(
+            'python',SherlockPath,UsernameToSearch, '--json',
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True 
+        )
+        print({SherlockScan.stdout})
+        JsonOutput = json.loads(SherlockScan.stdout)
+        SocialMediaProfiles.append(JsonOutput)
+    return JsonResponse({'SocialMediaProfiles': SocialMediaProfiles})
+
+
+@login_required
+def FetchTwitterUsernames(request):
+    #Retrieve User Data from database
+    UserInfo = UserInformation.objects.get(user=request.user)
+    TwitterUsername= UserInfo.TwitterID
+    #Twitter API request code
+    url = f"https://api.x.com/2/users/by/username/{TwitterUsername}"
+    headers = {"Authorization": "Bearer AAAAAAAAAAAAAAAAAAAAANHWzgEAAAAAdsB4mkOMH%2FqcsNX4YNUsRCcsvus%3DRDUsnOGkrKG7cp3golbmVsNpZmbDsBOOsbnhdHRQ2N08eBY5Wp"}
+    #make request
+    response = requests.get(url, headers=headers)
+    print(f"API Response: {response.text}")
+    #split data up to only relevant code
+    data=response.json()
+    UserTwitterData={"name": data["data"]["name"],
+                     "username": data["data"]["username"],
+                     "id": data["data"]["id"],
+                     "URL": f"https://x.com/{data['data']['username']}"
+                     }
+    return JsonResponse({"UserTwitterData": UserTwitterData});
+
+@login_required
+def FetchReddit(request):
+    reddit = praw.Reddit(
+        client_id="4Q7wO74vQG5YIFScJa2pHQ",
+        client_secret="NCirEq87BwkW7bFEMDwiCwx1cRgbFA",
+        user_agent="DigitalWaves" 
+        )
+    #Retreive username from database - use facebook one for now
+    UserInfo = UserInformation.objects.get(user=request.user)
+    RedditUsername= UserInfo.FacebookID
+    #make API call
+    UserRedditAPICall = reddit.redditor(RedditUsername)
+    UserRedditData = {
+        "username": UserRedditAPICall.name,
+        "URL": f"https://www.reddit.com/user/{UserRedditAPICall.name}",
+        }
+    print(UserRedditAPICall)
+    print(UserRedditData)
+    #return data to JS file
+    return JsonResponse({"UserRedditData": UserRedditData});
+
+@login_required
+def FetchGitHub(request):
+    #fetch the username from the database - use the facebook one for now
+    UserInfo = UserInformation.objects.get(user=request.user)
+    GitHubUsername = UserInfo.FacebookID
+    #Make API call
+    response = requests.get(f"https://api.github.com/users/{GitHubUsername}")
+    data = response.json()
+    print(data)
+    UserGitHubData = {
+        "username": data['login'],
+        "URL": data['html_url'],
+        }
+    #return to JS file
+    return JsonResponse({"UserGitHubData": UserGitHubData})
 
 @login_required
 def MainPage(request):
