@@ -64,7 +64,6 @@ def FetchTwitterUsernames(request):
     headers = {"Authorization": "Bearer AAAAAAAAAAAAAAAAAAAAANHWzgEAAAAAdsB4mkOMH%2FqcsNX4YNUsRCcsvus%3DRDUsnOGkrKG7cp3golbmVsNpZmbDsBOOsbnhdHRQ2N08eBY5Wp"}
     #make request
     response = requests.get(url, headers=headers)
-    print(f"API Response: {response.text}")
     #split data up to only relevant code
     data=response.json()
     UserTwitterData={"name": data["data"]["name"],
@@ -90,8 +89,6 @@ def FetchReddit(request):
         "username": UserRedditAPICall.name,
         "URL": f"https://www.reddit.com/user/{UserRedditAPICall.name}",
         }
-    print(UserRedditAPICall)
-    print(UserRedditData)
     #return data to JS file
     return JsonResponse({"UserRedditData": UserRedditData});
 
@@ -103,13 +100,28 @@ def FetchGitHub(request):
     #Make API call
     response = requests.get(f"https://api.github.com/users/{GitHubUsername}")
     data = response.json()
-    print(data)
     UserGitHubData = {
         "username": data['login'],
         "URL": data['html_url'],
         }
     #return to JS file
     return JsonResponse({"UserGitHubData": UserGitHubData})
+
+@login_required
+def FetchPwned(request):
+    #retrieve email from database
+    UserInfo = UserInformation.objects.get(user=request.user)
+    UserEmail=UserInfo.Email
+    #Set credentials
+    Credentials = {
+        'User-Agent': 'DigitalWaves',
+        'hibp-api-key': '0f30dd56475641eb9a77d2e1766fe810'
+        }
+    #Make API call
+    response = requests.get(f"https://haveibeenpwned.com/api/v3/breachedaccount/{UserEmail}",headers=Credentials)
+    UserPwnedData = response.json()
+    #return to JS file
+    return JsonResponse({"UserPwnedData": UserPwnedData})
 
 @login_required
 def MainPage(request):

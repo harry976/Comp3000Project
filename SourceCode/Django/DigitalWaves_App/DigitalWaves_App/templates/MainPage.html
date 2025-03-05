@@ -12,6 +12,7 @@
     <script src="{% static 'js/FetchTwitterUsernames.js' %}"></script>
     <script src="{% static 'js/FetchReddit.js' %}"></script>
     <script src="{% static 'js/FetchGitHub.js' %}"></script>
+    <script src="{% static 'js/FetchPwned.js' %}"></script>
 </head>
 <style>
     body {
@@ -278,14 +279,22 @@
                     </ul>
                 </div>
                 <div id="SocialMedia" class="ResultsTabContent">
-                    <ul id="SocialMediaResults">
+                    <ul id="TwitterResults">
 
-                        <!-- add in display for reddit and github-->
+                        <!--Results for Twitter Appear here-->
                     </ul>
-
+                    <ul id="RedditResults">
+                        <!--Results for reddit appear here-->
+                    </ul>
+                    <ul id="GitHubResults">
+                        <!--Results for Github appear here-->
+                    </ul>
                 </div>
                 <div id="DataBreaches" class="ResultsTabContent">
-                    <p>Data Breach reports will appear here</p>
+                    <ul id="DataBreachResults">
+
+                        <!--Results for HaveIBeenPwned appear here-->
+                    </ul>
 
                 </div>
                 <div id="PropertyOwnership" class="ResultsTabContent">

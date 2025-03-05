@@ -26,6 +26,7 @@ urlpatterns = [
     path('FetchTwitterUsernames/', views.FetchTwitterUsernames, name='FetchTwitterUsernames'),
     path('FetchReddit/', views.FetchReddit, name='FetchReddit'),
     path('FetchGitHub/', views.FetchGitHub, name='FetchGitHub'),
+    path('FetchPwned/', views.FetchPwned, name='FetchPwned'),
     path('login/', LoginView.as_view(template_name='LoginPage.html'), name='Login'),
     path('logout/', views.LogoutView, name='Logout'),
     path('register/', views.RegistrationView, name='Register'),
