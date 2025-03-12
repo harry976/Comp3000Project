@@ -62,8 +62,8 @@
     }
 
         .ScanButton button {
-            width: 300px;
-            height: 300px;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             background-color: #e9ecef;
             border: 4px solid #046A88;
@@ -226,8 +226,80 @@
         display: flex;
        
     }
-    
+    #SocialMedia {
+        max-height: 450px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    #GoogleResults {
+        overflow: visible;
+        max-height: none;
+    }
+    #GitHubResults {
+        width: 100%;
+        overflow: visible;
+        max-height: none;
+        list-style-type: none;
+    }
+    #TwitterResults {
+        overflow: visible;
+        max-height: none;
+    }
+    #RedditResults {
+        overflow: visible;
+        max-height: none;
+    }
+    #News {
+        max-height: 450px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex-direction: column;
+    }
+    #DataBreaches {
+        max-height: 450px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex-direction: column;
+    }
+    #DataBreachResults {
+        overflow: visible;
+        max-height: none;
+    }
+    #NewsResults {
+        overflow: visible;
+        max-height: none;
+    }
+    .IndividualResultsContainer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    .IndividualResultsIcon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    .IndividualResultsContent {
 
+        flex-shrink: 0;
+        font-size: 16px;
+        width: auto;
+        color: black;
+    }
+    .IndividualResultConfirmButton {
+        background-color: #046A88;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+        .IndividualResultConfirmButton:hover {
+            background-color: #035B74
+        }
 </style>
 <body>
     <input type="checkbox" id="check">
@@ -269,7 +341,7 @@
                     <button class="ResultsTab" onclick="OpenTab(event,'PropertyOwnership')">Property</button>
                 </div>
                 <div id="News" class="ResultsTabContent">
-                    <ul>
+                    <ul id="NewsResults">
                         {% for article in articles %}
                         <li>
                             <a href="{{ article.url }}" target="_blank">

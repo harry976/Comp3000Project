@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             const response = await fetch("/FetchTwitterUsernames/"); // Call the view
             const data = await response.json(); // Parse JSON response
-            console.log("Fetched Data", data);
             if (data.UserTwitterData) {
                 const UserData = data.UserTwitterData
                 const listItem = document.createElement("li");

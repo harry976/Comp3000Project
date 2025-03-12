@@ -32,7 +32,7 @@ def FetchNews(request):
         print(f"Error fetching news: {e}")
         return JsonResponse({'error': 'Unable to fetch data'}, status=500)
 
-##unused code - may impllement in the future
+##unused code - may implement in the future
 @login_required
 async def SherlockSocialMedia(request):
     SocialMediaProfiles=[]
@@ -140,7 +140,6 @@ def FetchGoogleFacebookLinkedin(request):
         response = requests.get(f"https://www.googleapis.com/customsearch/v1?q={URL}&key={APIKey}&cx={SearchEngineID}")
         data = response.json()
         GoogleResults.extend(data["items"])
-    print("The results of the search are: ",GoogleResults)
     return JsonResponse({"GoogleResults": GoogleResults})
 
 @login_required

@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             const response = await fetch("/FetchReddit/"); // Call the view
             const data = await response.json(); // Parse JSON response
-            console.log("Fetched Data", data);
             if (data.UserRedditData) {
                 const UserData = data.UserRedditData
                 const listItem = document.createElement("li");
