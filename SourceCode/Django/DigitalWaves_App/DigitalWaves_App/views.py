@@ -118,7 +118,7 @@ def FetchPwned(request):
         'hibp-api-key': '0f30dd56475641eb9a77d2e1766fe810'
         }
     #Make API call
-    response = requests.get(f"https://haveibeenpwned.com/api/v3/breachedaccount/{UserEmail}",headers=Credentials)
+    response = requests.get(f"https://haveibeenpwned.com/api/v3/breachedaccount/{UserEmail}?truncateResponse=false",headers=Credentials)
     UserPwnedData = response.json()
     #return to JS file
     return JsonResponse({"UserPwnedData": UserPwnedData})

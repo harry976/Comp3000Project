@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ScanButton.addEventListener("click", async () => {
         try {
+            resultsContainer.innerHTML = "";
             const response = await fetch("/FetchGitHub/"); // Call the view
             const data = await response.json(); // Parse JSON response
             if (data.UserGitHubData) {
@@ -45,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 //append to results list for front end
                 resultsContainer.appendChild(DynamicTemplateResults);
 
-                resultsContainer.offsetHeight;
                 //end add to dynamic template
                 
                 
