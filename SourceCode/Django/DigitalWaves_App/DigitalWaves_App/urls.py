@@ -36,4 +36,5 @@ urlpatterns = [
     path('DeleteAccount/', views.DeleteAccountView, name='DeleteAccount'),
     path('home/', views.MainPage, name="MainPage"),
     path('DataForm/', views.DataForm, name="DataForm"),
+    path('SaveEntryToDB/', views.SaveEntryToDB, name="SaveEntryToDB"),
 ]

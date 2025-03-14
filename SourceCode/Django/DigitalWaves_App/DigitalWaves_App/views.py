@@ -1,4 +1,5 @@
 import subprocess
+from django.contrib.auth.forms import UsernameField
 import requests
 import json 
 import os
@@ -9,9 +10,11 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from .forms import UserInformationForm
 from .models import UserInformation
+from .models import ConfirmedResultsEntries
 
 
 
@@ -284,5 +287,20 @@ def DeleteAccountView(request):
 
 
 
+@login_required
+@csrf_exempt
+def SaveEntryToDB(request):  
+    if request.method == "POST":
+         try:
+            RetrievedData = json.loads(request.body)
+            logo = RetrievedData.get("logo")
+            content = RetrievedData.get("content")
 
-
+            EntryToDatabase = ConfirmedResultsEntries.objects.create(
+                user=request.user,
+                image=logo,
+                content=content
+                )
+            return JsonResponse({"status": "success", "message": "entry saved"})
+         except Exception as error:
+            return JsonResponse({"status": "error", "message": str(error)})

@@ -14,6 +14,7 @@
     <script src="{% static 'js/FetchGitHub.js' %}"></script>
     <script src="{% static 'js/FetchPwned.js' %}"></script>
     <script src="{% static 'js/FetchGoogle.js' %}"></script>
+    <script src="{% static 'js/ConfirmButtonListeners.js' %}"></script>
 </head>
 <style>
     body {
@@ -332,7 +333,7 @@
             <div class="ScanButton">
                 <button>Start Scan</button>
             </div>
-            <div class="Results">
+            <div id="AllResults" class="Results">
                 <h3>Results</h3>
                 <div class="ResultsTabs">
                     <button class="ResultsTab active" onclick="OpenTab(event,'News')">News</button>

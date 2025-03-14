@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     //append to results list for front end
                     resultsContainer.appendChild(DynamicTemplateResults);
-
                     //end add to dynamic template
 
                     

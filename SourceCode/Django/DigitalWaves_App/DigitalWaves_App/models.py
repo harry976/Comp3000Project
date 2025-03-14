@@ -22,3 +22,20 @@ class UserInformation(models.Model):
 
     def __str__(self):
         return f"{self.user.username}'s Profile"
+
+
+
+class ConfirmedResultsEntries(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    image = models.URLField()
+    content = models.TextField()
+
+    def __str__(self):
+        return f"Confirmed Entry for {self.user.username}"
+
+class HowToFixCategories(models.Model):
+    Flag = models.TextField(max_length=30, unique=True)
+    TipToFix = models.TextField()
+
+    def __str__(self):
+        return f"How to Fix category: {self.Flag}"
