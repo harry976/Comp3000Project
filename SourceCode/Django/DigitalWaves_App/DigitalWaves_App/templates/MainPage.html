@@ -15,6 +15,7 @@
     <script src="{% static 'js/FetchPwned.js' %}"></script>
     <script src="{% static 'js/FetchGoogle.js' %}"></script>
     <script src="{% static 'js/ConfirmButtonListeners.js' %}"></script>
+    <script src="{% static 'js/RetreiveDBEntries.js' %}"></script>
 </head>
 <style>
     body {
@@ -301,6 +302,19 @@
         .IndividualResultConfirmButton:hover {
             background-color: #035B74
         }
+
+    .ConfirmButton {
+        background-color: #046A88;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+        .ConfirmButton:hover {
+            background-color: #035B74
+        }
 </style>
 <body>
     <input type="checkbox" id="check">
@@ -333,6 +347,7 @@
             <div class="ScanButton">
                 <button>Start Scan</button>
             </div>
+                <button class="ConfirmButton">Confirm Entries</button>
             <div id="AllResults" class="Results">
                 <h3>Results</h3>
                 <div class="ResultsTabs">
@@ -387,11 +402,11 @@
             <h2>Check Your Score</h2>
             <div class="DisplayScore">
                 <div class="DisplayCircle">
-                    <span>2</span>
+                    <span id="ScoreNumber">-</span>
                     <small>/100</small>
                 </div>
             </div>
-            <div class="ScoreBreakdown">
+            <div id="ScoreBreakdown" class="ScoreBreakdown">
                 <h3>Score Breakdown</h3>
             </div>
         </div>

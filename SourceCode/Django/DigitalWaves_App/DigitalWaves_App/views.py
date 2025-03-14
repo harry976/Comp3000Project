@@ -304,3 +304,16 @@ def SaveEntryToDB(request):
             return JsonResponse({"status": "success", "message": "entry saved"})
          except Exception as error:
             return JsonResponse({"status": "error", "message": str(error)})
+
+@login_required
+def RetrieveEntriesFromDB(request):
+    #retrieve entries
+    DBEntryStore = ConfirmedResultsEntries.objects.filter(user=request.user)
+    #put them in a JSON
+    EntriesFromDBArray = []
+    for i in DBEntryStore:
+        EntriesFromDBArray.append({
+            "logo": i.image,
+            "content": i.content
+        })
+    return JsonResponse({"entries": EntriesFromDBArray})

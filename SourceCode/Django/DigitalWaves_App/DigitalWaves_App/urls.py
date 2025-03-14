@@ -37,4 +37,5 @@ urlpatterns = [
     path('home/', views.MainPage, name="MainPage"),
     path('DataForm/', views.DataForm, name="DataForm"),
     path('SaveEntryToDB/', views.SaveEntryToDB, name="SaveEntryToDB"),
+    path('RetreiveDBEntries/', views.RetrieveEntriesFromDB, name="RetrieveDBEntries")
 ]
