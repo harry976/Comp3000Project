@@ -15,6 +15,7 @@ from django.http import JsonResponse
 from .forms import UserInformationForm
 from .models import UserInformation
 from .models import ConfirmedResultsEntries
+from .models import HowToFixCategories
 
 
 
@@ -295,11 +296,15 @@ def SaveEntryToDB(request):
             RetrievedData = json.loads(request.body)
             logo = RetrievedData.get("logo")
             content = RetrievedData.get("content")
+            APITypeFromData = RetrievedData.get("APIType")
+
+            FlagsDBAPIType = HowToFixCategories.objects.get(APIType=APITypeFromData)
 
             EntryToDatabase = ConfirmedResultsEntries.objects.create(
                 user=request.user,
                 image=logo,
-                content=content
+                content=content,
+                APIType=FlagsDBAPIType
                 )
             return JsonResponse({"status": "success", "message": "entry saved"})
          except Exception as error:
@@ -314,6 +319,7 @@ def RetrieveEntriesFromDB(request):
     for i in DBEntryStore:
         EntriesFromDBArray.append({
             "logo": i.image,
-            "content": i.content
+            "content": i.content,
+            "APIType": i.APIType.APIType
         })
     return JsonResponse({"entries": EntriesFromDBArray})

@@ -24,18 +24,22 @@ class UserInformation(models.Model):
         return f"{self.user.username}'s Profile"
 
 
+class HowToFixCategories(models.Model):
+    APIType = models.TextField(max_length=30, unique=True)
+    TipToFix = models.TextField()
+
+    def __str__(self):
+        return f"How to Fix category: {self.APIType}"
+
 
 class ConfirmedResultsEntries(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     image = models.URLField()
     content = models.TextField()
+    APIType = models.ForeignKey(HowToFixCategories, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"Confirmed Entry for {self.user.username}"
 
-class HowToFixCategories(models.Model):
-    Flag = models.TextField(max_length=30, unique=True)
-    TipToFix = models.TextField()
 
-    def __str__(self):
-        return f"How to Fix category: {self.Flag}"
+

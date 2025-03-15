@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const DynamicTemplateIcon = document.createElement("img");
                 DynamicTemplateIcon.classList.add("IndividualResultsIcon");
                 DynamicTemplateIcon.src = "https://via.placeholder.com/40";
-                DynamicTemplateIcon.alt = `X`;
+                DynamicTemplateIcon.alt = `Twitter`;
 
                 //create content from main page css
                 const DynamicTemplateContent = document.createElement("div");

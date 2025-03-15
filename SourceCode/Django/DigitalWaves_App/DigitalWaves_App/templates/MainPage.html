@@ -315,6 +315,26 @@
         .ConfirmButton:hover {
             background-color: #035B74
         }
+
+    .FixHintBubble{
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        border: 1px solid;
+        border radius: 10px;
+        padding: 10px;
+        max-width: 150px;
+    }
+        .FixHintBubble::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px;
+            border-style: solid;
+            border-color: #f9f9f9
+        }
 </style>
 <body>
     <input type="checkbox" id="check">

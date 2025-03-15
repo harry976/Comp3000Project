@@ -18,8 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
                     //create Icon from main page css
                     const DynamicTemplateIcon = document.createElement("img");
                     DynamicTemplateIcon.classList.add("IndividualResultsIcon");
-                    DynamicTemplateIcon.src = "https://via.placeholder.com/40";
-                    DynamicTemplateIcon.alt = `Google`;
+
+                    if (result.link.includes("facebook.com")) {
+                        DynamicTemplateIcon.src = "https://via.placeholder.com/40";
+                        DynamicTemplateIcon.alt = `Facebook`;
+                    }
+                    else if (result.link.includes("linkedin.com")) {
+                        DynamicTemplateIcon.src = "https://via.placeholder.com/40";
+                        DynamicTemplateIcon.alt = `LinkedIn`;
+                    }
+                    else {
+                        DynamicTemplateIcon.src = "https://via.placeholder.com/40";
+                        DynamicTemplateIcon.alt = `Google`;
+                    }
 
                     //create content from main page css
                     const DynamicTemplateContent = document.createElement("div");

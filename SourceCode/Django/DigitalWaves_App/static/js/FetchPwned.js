@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const DynamicTemplateIcon = document.createElement("img");
                     DynamicTemplateIcon.classList.add("IndividualResultsIcon");
                     DynamicTemplateIcon.src = breach.LogoPath;
-                    DynamicTemplateIcon.alt = `Pwned`;
+                    DynamicTemplateIcon.alt = `HaveIBeenPwned`;
 
                     //create content from main page css
                     const DynamicTemplateContent = document.createElement("div");

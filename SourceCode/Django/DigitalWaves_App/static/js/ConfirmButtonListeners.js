@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const WholeTemplate = click.target.closest(".IndividualResultsContainer");
                 const Logo = WholeTemplate.querySelector(".IndividualResultsIcon").src;
                 const Content = WholeTemplate.querySelector(".IndividualResultsContent").innerHTML;
-
+                const APIType = WholeTemplate.querySelector(".IndividualResultsIcon").alt;
+                console.log("Flag type",APIType);
                 //send a JSON POST to the database - View handles logic
                 const ResponseToDB = await fetch('/SaveEntryToDB/', {
                     method: "POST",
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     body: JSON.stringify({
                         logo: Logo,
                         content: Content,
+                        APIType: APIType,
                     }),
                 });
                 const responseDBPush = await ResponseToDB.json();
