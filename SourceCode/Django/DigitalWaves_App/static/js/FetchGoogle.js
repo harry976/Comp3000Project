@@ -20,15 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     DynamicTemplateIcon.classList.add("IndividualResultsIcon");
 
                     if (result.link.includes("facebook.com")) {
-                        DynamicTemplateIcon.src = "https://via.placeholder.com/40";
+                        DynamicTemplateIcon.src = "/static/FacebookLogo.png";
                         DynamicTemplateIcon.alt = `Facebook`;
                     }
                     else if (result.link.includes("linkedin.com")) {
-                        DynamicTemplateIcon.src = "https://via.placeholder.com/40";
+                        DynamicTemplateIcon.src = "/static/LinkedInLogo.png";
                         DynamicTemplateIcon.alt = `LinkedIn`;
                     }
                     else {
-                        DynamicTemplateIcon.src = "https://via.placeholder.com/40";
+                        DynamicTemplateIcon.src = "/static/GoogleLogo.png";
                         DynamicTemplateIcon.alt = `Google`;
                     }
 

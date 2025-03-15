@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     //create Icon from main page css
                     const DynamicTemplateIcon = document.createElement("img");
                     DynamicTemplateIcon.classList.add("IndividualResultsIcon");
-                    DynamicTemplateIcon.src = "https://via.placeholder.com/40";
+                    DynamicTemplateIcon.src = "/static/NewsLogo.png";
                     DynamicTemplateIcon.alt = `News`;
 
                     //create content from main page css

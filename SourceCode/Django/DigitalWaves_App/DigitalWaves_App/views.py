@@ -148,6 +148,8 @@ def FetchGoogleFacebookLinkedin(request):
 
 @login_required
 def MainPage(request):
+    #clear results entries when main page loads
+    ConfirmedResultsEntries.objects.filter(user=request.user).delete()
     return render(request, 'MainPage.html')
 
 
@@ -323,3 +325,11 @@ def RetrieveEntriesFromDB(request):
             "APIType": i.APIType.APIType
         })
     return JsonResponse({"entries": EntriesFromDBArray})
+
+@login_required
+def GetFixHint(request, APIType):
+    try:
+        RelevantHint = HowToFixCategories.objects.get(APIType=APIType)
+        return JsonResponse({"Hint": RelevantHint.TipToFix})
+    except HowToFixCategories.DoesNotExist:
+        return JsonResponse({"Hint": "No Hints Available"})

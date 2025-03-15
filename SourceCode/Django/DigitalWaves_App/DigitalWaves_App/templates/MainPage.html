@@ -42,6 +42,7 @@
     }
 
     .ScanSection, .ScoreSection {
+        position: relative;
         background-color: white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         padding: 20px;
@@ -125,6 +126,14 @@
             color: #046A88;
         }
 
+
+    .ScoreEntries{
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 600px;
+        padding-top: 10px;
+
+    }
     .ScoreBreakdown h3 {
         font-size: 18px;
         color: #555;
@@ -206,13 +215,17 @@
         cursor: pointer;
         
     }
-
+    .ResultsTabs {
+        display: flex;
+        width: 100%;
+    }
     .ResultsTab {
         background-color: lightgray;
         border: none;
         padding: 12px;
         cursor: pointer;
-        border-radius: 8px 8px 0 0;
+        border-radius: 8px 8px 0px 0px;
+        flex: 1;
     }
         .ResultsTab.active {
             background-color: #046A88;
@@ -224,21 +237,17 @@
         padding: 12px;
         border: 1px solid #ccc;
     }
-    .ResultsTabs{
-        display: flex;
-       
-    }
     #SocialMedia {
-        max-height: 450px;
+        max-height: 400px;
         overflow-y: auto;
         overflow-x: hidden;
+        border: none;
     }
     #GoogleResults {
         overflow: visible;
         max-height: none;
     }
     #GitHubResults {
-        width: 100%;
         overflow: visible;
         max-height: none;
         list-style-type: none;
@@ -252,16 +261,18 @@
         max-height: none;
     }
     #News {
-        max-height: 450px;
+        max-height: 400px;
         overflow-y: auto;
         overflow-x: hidden;
         flex-direction: column;
+        border: none;
     }
     #DataBreaches {
-        max-height: 450px;
+        max-height: 400px;
         overflow-y: auto;
         overflow-x: hidden;
         flex-direction: column;
+        border: none;
     }
     #DataBreachResults {
         overflow: visible;
@@ -275,20 +286,25 @@
         display: flex;
         align-items: center;
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         border-radius: 10px;
+        background-color: #F9F9F9;
+        
     }
     .IndividualResultsIcon {
         width: 40px;
         height: 40px;
         border-radius: 50%;
+        padding-right: 10px;
     }
     .IndividualResultsContent {
 
-        flex-shrink: 0;
+        flex-grow: 1;
         font-size: 16px;
         width: auto;
         color: black;
+        padding-right: 10px;
+        
     }
     .IndividualResultConfirmButton {
         background-color: #046A88;
@@ -298,12 +314,15 @@
         border-radius: 10px;
         cursor: pointer;
         transition: 0.3s;
+        padding-left: 10px;
+        margin-right:10px;
     }
         .IndividualResultConfirmButton:hover {
             background-color: #035B74
         }
 
     .ConfirmButton {
+        position: absolute;
         background-color: #046A88;
         color: white;
         border: none;
@@ -311,6 +330,8 @@
         border-radius: 10px;
         cursor: pointer;
         transition: 0.3s;
+        bottom: 10px;
+        right: 10px;
     }
         .ConfirmButton:hover {
             background-color: #035B74
@@ -321,7 +342,7 @@
         position: absolute;
         background-color: #f9f9f9;
         border: 1px solid;
-        border radius: 10px;
+        border-radius: 10px;
         padding: 10px;
         max-width: 150px;
     }
@@ -367,7 +388,7 @@
             <div class="ScanButton">
                 <button>Start Scan</button>
             </div>
-                <button class="ConfirmButton">Confirm Entries</button>
+
             <div id="AllResults" class="Results">
                 <h3>Results</h3>
                 <div class="ResultsTabs">
@@ -408,7 +429,7 @@
 
                         <!--Results for HaveIBeenPwned appear here-->
                     </ul>
-                   
+
 
                 </div>
                 <div id="PropertyOwnership" class="ResultsTabContent">
@@ -416,7 +437,7 @@
 
                 </div>
             </div>
-
+            <button class="ConfirmButton">Confirm Entries</button>
         </div>
         <div class="ScoreSection">
             <h2>Check Your Score</h2>
@@ -428,6 +449,12 @@
             </div>
             <div id="ScoreBreakdown" class="ScoreBreakdown">
                 <h3>Score Breakdown</h3>
+                <div id="ScoreEntrySection" class="ScoreEntries">
+                    <!-- Results From confirmation database-->
+
+
+
+                </div>
             </div>
         </div>
     </div>
