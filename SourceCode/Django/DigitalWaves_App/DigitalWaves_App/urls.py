@@ -38,5 +38,6 @@ urlpatterns = [
     path('SaveEntryToDB/', views.SaveEntryToDB, name="SaveEntryToDB"),
     path('RetreiveDBEntries/', views.RetrieveEntriesFromDB, name="RetreiveDBEntries"),
     path('GetFixHint/<str:APIType>/', views.GetFixHint, name="GetFixHint"),
-    path('DeleteOptionalData/', views.DeleteOptionalData, name="DeleteOptionalData")
+    path('DeleteOptionalData/', views.DeleteOptionalData, name="DeleteOptionalData"),
+    path('FetchCompaniesHouse/', views.FetchGoogleCompaniesHouse, name="FetchCompaniesHouse")
 ]

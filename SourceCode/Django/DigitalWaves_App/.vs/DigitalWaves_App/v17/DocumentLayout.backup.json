@@ -7,8 +7,24 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\HamburgerMenu.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:static\\js\\HamburgerMenu.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchReddit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:static\\js\\FetchReddit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchCompaniesHouse.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:static\\js\\FetchCompaniesHouse.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchPwned.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:static\\js\\FetchPwned.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchGoogle.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:static\\js\\FetchGoogle.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\RetreiveDBEntries.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:static\\js\\RetreiveDBEntries.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -17,22 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\MainPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\templates\\MainPage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\forms.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\forms.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchGoogle.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:static\\js\\FetchGoogle.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\DataForm.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\templates\\DataForm.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigitalWaves_App\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,37 +42,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HamburgerMenu.js",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\HamburgerMenu.js",
-              "RelativeDocumentMoniker": "static\\js\\HamburgerMenu.js",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\HamburgerMenu.js",
-              "RelativeToolTip": "static\\js\\HamburgerMenu.js",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAHYAAAAjAAAAAAAAAA==",
+              "Title": "FetchReddit.js",
+              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchReddit.js",
+              "RelativeDocumentMoniker": "static\\js\\FetchReddit.js",
+              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchReddit.js",
+              "RelativeToolTip": "static\\js\\FetchReddit.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-16T15:44:43.106Z",
+              "WhenOpened": "2025-03-16T17:18:45.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "urls.py",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\urls.py",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\urls.py",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\urls.py",
-              "RelativeToolTip": "DigitalWaves_App\\urls.py",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACcAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-03-16T15:43:56.276Z",
+              "DocumentIndex": 3,
+              "Title": "FetchPwned.js",
+              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchPwned.js",
+              "RelativeDocumentMoniker": "static\\js\\FetchPwned.js",
+              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchPwned.js",
+              "RelativeToolTip": "static\\js\\FetchPwned.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-16T17:16:09.263Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "RetreiveDBEntries.js",
+              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\RetreiveDBEntries.js",
+              "RelativeDocumentMoniker": "static\\js\\RetreiveDBEntries.js",
+              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\RetreiveDBEntries.js",
+              "RelativeToolTip": "static\\js\\RetreiveDBEntries.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-16T17:12:59.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "FetchGoogle.js",
               "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchGoogle.js",
               "RelativeDocumentMoniker": "static\\js\\FetchGoogle.js",
@@ -80,20 +93,46 @@
               "RelativeToolTip": "static\\js\\FetchGoogle.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-16T15:31:09.69Z",
+              "WhenOpened": "2025-03-16T17:12:41.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "forms.py",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\forms.py",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\forms.py",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\forms.py",
-              "RelativeToolTip": "DigitalWaves_App\\forms.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABcAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "urls.py",
+              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\urls.py",
+              "RelativeDocumentMoniker": "DigitalWaves_App\\urls.py",
+              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\urls.py",
+              "RelativeToolTip": "DigitalWaves_App\\urls.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-03-16T15:03:21.607Z",
+              "WhenOpened": "2025-03-16T17:04:43.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainPage.html",
+              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\MainPage.html",
+              "RelativeDocumentMoniker": "DigitalWaves_App\\templates\\MainPage.html",
+              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\MainPage.html",
+              "RelativeToolTip": "DigitalWaves_App\\templates\\MainPage.html",
+              "ViewState": "AgIAANcBAAAAAAAAAAAAAPoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-16T17:00:13.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FetchCompaniesHouse.js",
+              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchCompaniesHouse.js",
+              "RelativeDocumentMoniker": "static\\js\\FetchCompaniesHouse.js",
+              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\static\\js\\FetchCompaniesHouse.js",
+              "RelativeToolTip": "static\\js\\FetchCompaniesHouse.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-16T16:58:45.73Z",
               "EditorCaption": ""
             },
             {
@@ -104,48 +143,9 @@
               "RelativeDocumentMoniker": "DigitalWaves_App\\views.py",
               "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\views.py",
               "RelativeToolTip": "DigitalWaves_App\\views.py",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEMAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2025-03-16T14:30:17.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DataForm.html",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\DataForm.html",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\templates\\DataForm.html",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\DataForm.html",
-              "RelativeToolTip": "DigitalWaves_App\\templates\\DataForm.html",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAJUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-03-16T14:33:24.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainPage.html",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\MainPage.html",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\templates\\MainPage.html",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\templates\\MainPage.html",
-              "RelativeToolTip": "DigitalWaves_App\\templates\\MainPage.html",
-              "ViewState": "AgIAALsAAAAAAAAAAAAswN8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-03-15T13:52:29.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "models.py",
-              "DocumentMoniker": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\models.py",
-              "RelativeDocumentMoniker": "DigitalWaves_App\\models.py",
-              "ToolTip": "C:\\Users\\harry\\Comp3000Project\\SourceCode\\Django\\DigitalWaves_App\\DigitalWaves_App\\models.py",
-              "RelativeToolTip": "DigitalWaves_App\\models.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-03-16T14:18:36.036Z",
               "EditorCaption": ""
             }
           ]

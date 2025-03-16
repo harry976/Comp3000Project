@@ -16,6 +16,7 @@
     <script src="{% static 'js/FetchGoogle.js' %}"></script>
     <script src="{% static 'js/ConfirmButtonListeners.js' %}"></script>
     <script src="{% static 'js/RetreiveDBEntries.js' %}"></script>
+    <script src="{% static 'js/FetchCompaniesHouse.js' %}"></script>
 </head>
 <style>
     body {
@@ -299,6 +300,11 @@
         overflow: visible;
         max-height: none;
     }
+    #Businesses{
+        overflow-x: hidden;
+        overflow-y: auto;
+        border: none;
+    }
     .IndividualResultsContainer {
         display: flex;
         align-items: center;
@@ -461,7 +467,7 @@
                     <button class="ResultsTab active" onclick="OpenTab(event,'News')">News</button>
                     <button class="ResultsTab" onclick="OpenTab(event,'SocialMedia')">Social Media</button>
                     <button class="ResultsTab" onclick="OpenTab(event,'DataBreaches')">Breaches</button>
-                    <button class="ResultsTab" onclick="OpenTab(event,'PropertyOwnership')">Property</button>
+                    <button class="ResultsTab" onclick="OpenTab(event,'Businesses')">Property</button>
                 </div>
                 <div id="News" class="ResultsTabContent">
                     <ul id="NewsResults">
@@ -498,8 +504,8 @@
 
 
                 </div>
-                <div id="PropertyOwnership" class="ResultsTabContent">
-                    <p>Property Ownership reports will appear here</p>
+                <div id="Businesses" class="ResultsTabContent">
+                    <!--Results for companiesHouse appear here-->
 
                 </div>
             </div>

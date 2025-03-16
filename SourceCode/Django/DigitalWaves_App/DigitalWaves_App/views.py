@@ -65,7 +65,7 @@ def FetchReddit(request):
         client_secret="NCirEq87BwkW7bFEMDwiCwx1cRgbFA",
         user_agent="DigitalWaves" 
         )
-    #Retreive username from database - use facebook one for now
+    #Retreive username from database - use facebook one
     UserInfo = UserInformation.objects.get(user=request.user)
     RedditUsername= UserInfo.FacebookID
     #make API call
@@ -125,6 +125,25 @@ def FetchGoogleFacebookLinkedin(request):
         response = requests.get(f"https://www.googleapis.com/customsearch/v1?q={URL}&key={APIKey}&cx={SearchEngineID}")
         data = response.json()
         GoogleResults.extend(data["items"])
+    return JsonResponse({"GoogleResults": GoogleResults})
+
+@login_required
+def FetchGoogleCompaniesHouse(request):
+     #retreive full name from database
+    UserInfo = UserInformation.objects.get(user=request.user)
+    UserFullName = UserInfo.Name
+    #set credentials
+    SearchEngineID = "a53b7c616e4a042be"
+    APIKey = "AIzaSyAThgldxT8lZolsc_oLaAXLL30DVCuIAmc"
+    GoogleResults = []
+    URL = f"site:companieshouse.gov.uk {UserFullName}"
+    response = requests.get(f"https://www.googleapis.com/customsearch/v1?q={URL}&key={APIKey}&cx={SearchEngineID}")
+    data = response.json()
+    print("Companies House results", data)
+    if 'items' in data:
+        GoogleResults.extend(data["items"])
+
+
     return JsonResponse({"GoogleResults": GoogleResults})
 
 @login_required
