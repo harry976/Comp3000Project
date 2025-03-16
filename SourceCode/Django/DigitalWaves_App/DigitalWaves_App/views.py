@@ -5,6 +5,7 @@ import json
 import os
 import asyncio
 import praw
+import string
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
@@ -226,7 +227,19 @@ def RegistrationView(request):
             return render(request, 'RegistrationPage.html')
 
         if password != ConfirmPassword:
-            messages.error(request, "passwords do not match")
+            messages.error(request, "Passwords do not match")
+            return render(request, 'RegistrationPage.html')
+
+        if len(password) < 8:
+            messages.error(request, "Passwords must be more than 8 characters")
+            return render(request, 'RegistrationPage.html')
+
+        if not any(char.isdigit() for char in password):
+            messages.error(request, "Passwords must contain at least 1 number")
+            return render(request, 'RegistrationPage.html')
+
+        if not any(char in string.punctuation for char in password):
+            messages.error(request, "Passwords must contain at least 1 special character")
             return render(request, 'RegistrationPage.html')
 
         #ensure username does not already exist
