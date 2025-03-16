@@ -54,16 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 //end add to dynamic template
 
-
-          
-
-
             } else {
                 resultsContainer.innerHTML = "<p>No results found.</p>";
             }
         } catch (error) {
-            console.error("Error fetching news:", error);
-            resultsContainer.innerHTML = "<p>Error fetching results.</p>";
+            console.error("Error fetching Twitter:", error);
+            resultsContainer.innerHTML = "<p>Something went wrong fetching X data. Please try again later.</p>";
         }
 
     });

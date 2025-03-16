@@ -36,26 +36,6 @@ def FetchNews(request):
         print(f"Error fetching news: {e}")
         return JsonResponse({'error': 'Unable to fetch data'}, status=500)
 
-##unused code - may implement in the future
-@login_required
-async def SherlockSocialMedia(request):
-    SocialMediaProfiles=[]
-    #Retrieve User Data from database
-    UserInfo = UserInformation.objects.get(user=request.user)
-    SocialMediaUsernames=[UserInfo.TwitterID,UserInfo.FacebookID,UserInfo.LinkedinUsername]
-    SherlockPath = os.path.join(os.getcwd(), 'Sherlock', 'sherlock_project', 'sherlock.py')
-    #run sherlock for each username
-    for i in SocialMediaUsernames:
-        UsernameToSearch = i
-        print(UsernameToSearch)
-        SherlockScan = await asyncio.create_subprocess_exec(
-            'python',SherlockPath,UsernameToSearch, '--json',
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True 
-        )
-        print({SherlockScan.stdout})
-        JsonOutput = json.loads(SherlockScan.stdout)
-        SocialMediaProfiles.append(JsonOutput)
-    return JsonResponse({'SocialMediaProfiles': SocialMediaProfiles})
 
 
 @login_required
@@ -177,7 +157,7 @@ def DataForm(request):
 
 
 
-
+@login_required
 def LogoutView(request):
     logout(request)
     return redirect('Login')

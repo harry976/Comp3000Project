@@ -93,7 +93,7 @@
             {% endfor %}
         </ul>
         {% endif %}
-        <form method="post" action="{%url 'Login' %}">
+        <form method="post" action="{% url 'Login' %}">
             {% csrf_token %}
             <!--for testing, the test account is testuser,testpassword-->
             <input type="text" name="username" placeholder="Username" required>

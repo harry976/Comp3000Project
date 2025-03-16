@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 resultsContainer.innerHTML = "<p>No results found.</p>";
             }
         } catch (error) {
-            console.error("Error fetching news:", error);
-            resultsContainer.innerHTML = "<p>Error fetching results.</p>";
+            console.error("Error fetching Pwned:", error);
+            resultsContainer.innerHTML = "<p>Something went wrong fetching Reddit data. Please try again later.</p>";
         }
     });
 });

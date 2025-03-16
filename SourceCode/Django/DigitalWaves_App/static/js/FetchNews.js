@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } catch (error) {
             console.error("Error fetching news:", error);
-            resultsContainer.innerHTML = "<p>Error fetching results.</p>";
+            resultsContainer.innerHTML = "<p>Something went wrong fetching News data. Please try again later.</p>";
         }
     });
 });
