@@ -8,7 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 const Logo = WholeTemplate.querySelector(".IndividualResultsIcon").src;
                 const Content = WholeTemplate.querySelector(".IndividualResultsContent").innerHTML;
                 const APIType = WholeTemplate.querySelector(".IndividualResultsIcon").alt;
-                console.log("Flag type",APIType);
+
+                //change the button text for user interaction
+                click.target.disabled = true;
+                click.target.textContent = "Confirmed";
+                click.target.style.backgroundColor = "#28a745";
+
+
                 //send a JSON POST to the database - View handles logic
                 const ResponseToDB = await fetch('/SaveEntryToDB/', {
                     method: "POST",

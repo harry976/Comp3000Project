@@ -60,11 +60,20 @@ function FixHintListener() {
                 if (data.Hint) {
                     FixHintBubble.innerHTML = `<p>${data.Hint}</p>`;
                     FixHintBubble.style.display = "block";
+                    document.getElementById("HintOverlay").style.display = "block";
                 }
             }
             catch (error) {
                 console.error("Error fetching fix hint:", error);
             }
         });
+    });
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".IndividualResultsContainer") && !e.target.classList.contains("IndividualResultConfirmButton")) {
+            document.querySelectorAll(".FixHintBubble").forEach(bubble => {
+                bubble.style.display = "none";
+            });
+            document.getElementById("HintOverlay").style.display = "none";
+        }
     });
 }

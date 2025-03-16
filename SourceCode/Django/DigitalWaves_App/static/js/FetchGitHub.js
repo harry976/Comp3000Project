@@ -61,19 +61,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/*
-
-const listItem = document.createElement("li");
-                listItem.innerHTML = `
-                    <p>Username: @${UserData.username}</p>
-                    <p>Profile: <a href="${UserData.URL}" target="_blank">${UserData.URL}</a></p>                                                                           
-                `;
-
-                resultsContainer.appendChild(listItem);
-
-
-                
-
-*/
 
 

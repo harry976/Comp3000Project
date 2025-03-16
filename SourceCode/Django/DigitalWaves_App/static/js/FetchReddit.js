@@ -2,8 +2,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     const ScanButton = document.querySelector(".ScanButton button");
     const resultsContainer = document.querySelector("#RedditResults");
+    const MovingLoadingBar = document.querySelector(".MovingLoadingBar");
 
     ScanButton.addEventListener("click", async () => {
+        MovingLoadingBar.style.display = "flex";
+        MovingLoadingBar.classList.add("ButtonBounce");
         try {
             resultsContainer.innerHTML = "";
             const response = await fetch("/FetchReddit/"); // Call the view
@@ -47,8 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 resultsContainer.appendChild(DynamicTemplateResults);
 
                 //end add to dynamic template
-                
-
 
             } else {
                 resultsContainer.innerHTML = "<p>No results found.</p>";
@@ -56,6 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             console.error("Error fetching news:", error);
             resultsContainer.innerHTML = "<p>Error fetching results.</p>";
+        }
+        finally {
+            MovingLoadingBar.classList.remove("ButtonBounce");
+            MovingLoadingBar.style.display = "none";
         }
     });
 });
