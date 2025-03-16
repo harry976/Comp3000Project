@@ -119,35 +119,33 @@
             <div class="form-wrapper">                               
                 <div class="RequiredForm">
                     <h3>Required</h3>
-                    <input type="text" name="Name" placeholder="Name" required>
-                    <input type="date" name="DOB" placeholder="Date of Birth" required>
-                        <label>
-                            <span>Married:</span>
-                            <input type="checkbox" name="Married">
-                        </label>
-                    
-                    <input type="email" name="Email" placeholder="Email Address" required>
-                    <input type="tel" name="PhoneNumber" placeholder="Phone Number" required>
-                </div>             
+                    {{ form.Name }}
+                    {{ form.DOB }}
+                    <label>
+                        <span>Married:</span>
+                        {{ form.Married }}
+                    </label>
+                    {{ form.Email }}
+                    {{ form.PhoneNumber }}
+                </div>
                 <div class="OptionalForm">
                     <h3>Optional</h3>
-                    <input type="text" name="Address" placeholder="Address">
-                    <input type="text" name="OtherName" placeholder="Other Name">
-                    <input type="text" name="FacebookID" placeholder="Facebook Username">
-                    <input type="text" name="TwitterID" placeholder="Twitter Username">
-                    <input type="text" name="LinkedInUsername" placeholder="LinkedIn Username">
+                    {{ form.Address }}
+                    {{ form.OtherName }}
+                    {{ form.FacebookID }}
+                    {{ form.TwitterID }}
+                    {{ form.LinkedinUsername }}
                     <label>
                         <span>Criminal Record:</span>
-                        <input type="checkbox" name="CriminalRecord">
+                        {{ form.CriminalRecord }}
                     </label>
                     <label>
                         <span>Property Owner:</span>
-                        <input type="checkbox" name="OwnProperty">
+                        {{ form.OwnProperty }}
                     </label>
                     <label>
                         <span>Sex:</span>
-                        <input type="radio" name="Sex" value="Male">Male
-                        <input type="radio" name="Sex" value="Female">Female
+                        {{ form.Sex }}
                     </label>
                 </div>
             </div>

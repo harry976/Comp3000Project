@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let ChangeUsernameURL = "/ChangeUsername/";
         let ChangePasswordURL = "/ChangePassword/";
         let DeleteAccountURL = "/DeleteAccount/";
+        let DeleteOptionalInfoURL = "/DeleteOptionalData/"
         SideMenuContent.innerHTML = `
         <label for="check" class="closebtn">&times</label>
         <h2 class="AccountSettingsHeader">Account Settings</h2>
@@ -96,13 +97,13 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
         <a href="${DeleteAccountURL}">
             <button type="button" class="DeleteAccountButton">Delete Account</button>
-        </a
+        </a>
         <button type="button" class="DeleteOptionalInformationButton">Delete Optional Information</button>
-
         <button class=BackButton id=BackButton>Back</button>
         `;
         /*calls the listener for the back button */
         BackButtonListener();
+        DeleteOptionalInformationButtonListener();
     }
 
 
@@ -115,11 +116,38 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /*listener for the back buttons on different menu pages */
-    function BackButtonListener(){
+    function BackButtonListener() {
         const BackButton = SideMenuContent.querySelector(".BackButton")
         BackButton.addEventListener("click", LoadMainMenu);
     }
 
+    /*listener for the Delete Optional information button */
+    function DeleteOptionalInformationButtonListener() {
+
+        const DeleteOptionalDataButton = SideMenuContent.querySelector(".DeleteOptionalInformationButton");
+        DeleteOptionalDataButton.addEventListener("click", function () {
+            fetch("/DeleteOptionalData/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ delete: true }),
+            })
+                .then(response => {
+                    if (response.ok) {
+                        DeleteOptionalDataButton.textContent = "Optional Data Deleted";
+                        DeleteOptionalDataButton.style.backgroundColor = "green";
+                        DeleteOptionalDataButton.style.color = "white";
+                        DeleteOptionalDataButton.disabled = true;
+                    }
+                    else {
+                        alert("Delete Failed. Please try again.");
+                    }
+                })
+                .catch(error => console.error("error:", error));
+        });
+    }
+    
     /*Load the main menu */
     LoadMainMenu();
 

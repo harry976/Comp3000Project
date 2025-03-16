@@ -136,12 +136,19 @@ def MainPage(request):
 @login_required
 def DataForm(request):
     print("entered view. success")
+    #get existing user info for data prefill
+    try:
+        ExistingUserInfo = UserInformation.objects.get(user=request.user)
+    except UserInformation.DoesNotExist:
+        ExistingUserInfo = None
+    #request data form
     if request.method == 'POST':
-        UserDataForm = UserInformationForm(request.POST)
+        UserDataForm = UserInformationForm(request.POST, instance=ExistingUserInfo)
         print("the method was POST. success")
-
+        #if filled in correctly
         if UserDataForm.is_valid():
             print("Form is valid. success")
+            #save to user
             SaveUserForm = UserDataForm.save(commit=False)
             SaveUserForm.user = request.user
             SaveUserForm.save()
@@ -151,10 +158,38 @@ def DataForm(request):
         else:
             print(UserDataForm.errors)
     else:
-        UserDataForm = UserInformationForm()
+        #if existing user
+        if ExistingUserInfo:
+            #prefill form
+           UserDataForm = UserInformationForm(instance=ExistingUserInfo)
+        else:
+            #blank form
+            UserDataForm = UserInformationForm()
 
     return render(request, "DataForm.html", {'form': UserDataForm})
 
+@csrf_exempt
+@login_required
+def DeleteOptionalData(request):
+    try:
+        ExistingUserData = UserInformation.objects.get(user=request.user)
+    except UserInformation.DoesNotExist:
+        ExistingUserData = None
+        success = False
+    if request.method == "POST":
+        if ExistingUserData:
+            ExistingUserData.Address = None
+            ExistingUserData.OtherName = None
+            ExistingUserData.FacebookID = None
+            ExistingUserData.TwitterID = None
+            ExistingUserData.LinkedinUsername = None
+            ExistingUserData.CriminalRecord = None
+            ExistingUserData.OwnProperty = None
+            ExistingUserData.Sex = None
+            ExistingUserData.save()
+            success = True
+
+    return JsonResponse({'success': success})
 
 
 @login_required
