@@ -120,11 +120,13 @@ def FetchGoogleFacebookLinkedin(request):
     #set URLs
     URLsToQuery =[ f"site:facebook.com {UserFacebookID}", f"site:linkedin.com {UserLinkedinUsername}"]
     GoogleResults = []
+    LinkedInResults = []
     #make API call
     for URL in URLsToQuery:
         response = requests.get(f"https://www.googleapis.com/customsearch/v1?q={URL}&key={APIKey}&cx={SearchEngineID}")
         data = response.json()
-        GoogleResults.extend(data["items"])
+        if 'items' in data:
+            GoogleResults.extend(data["items"])
     return JsonResponse({"GoogleResults": GoogleResults})
 
 @login_required
@@ -139,11 +141,8 @@ def FetchGoogleCompaniesHouse(request):
     URL = f"site:companieshouse.gov.uk {UserFullName}"
     response = requests.get(f"https://www.googleapis.com/customsearch/v1?q={URL}&key={APIKey}&cx={SearchEngineID}")
     data = response.json()
-    print("Companies House results", data)
     if 'items' in data:
         GoogleResults.extend(data["items"])
-
-
     return JsonResponse({"GoogleResults": GoogleResults})
 
 @login_required

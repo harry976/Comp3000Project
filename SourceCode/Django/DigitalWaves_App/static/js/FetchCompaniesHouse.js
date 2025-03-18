@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const ScanButton = document.querySelector(".ScanButton button");
-    const resultsContainer = document.querySelector("#Businesses");
+    const resultsContainer = document.querySelector("#BusinessesResults");
 
     ScanButton.addEventListener("click", async () => {
         try {

@@ -304,6 +304,12 @@
         overflow-x: hidden;
         overflow-y: auto;
         border: none;
+        flex-direction: column;
+        max-height: 400px;
+    }
+    #BusinessesResults {
+        overflow: visible;
+        max-height: none;
     }
     .IndividualResultsContainer {
         display: flex;
@@ -311,7 +317,7 @@
         width: 100%;
         margin-bottom: 20px;
         border-radius: 10px;
-        background-color: #F9F9F9;
+        background-color: lightgray;
         
     }
     .IndividualResultsIcon {
@@ -353,8 +359,8 @@
         border-radius: 10px;
         cursor: pointer;
         transition: 0.3s;
-        bottom: 10px;
-        right: 10px;
+        bottom: 3px;
+        right: 5px;
     }
         .ConfirmButton:hover {
             background-color: #035B74
@@ -467,7 +473,7 @@
                     <button class="ResultsTab active" onclick="OpenTab(event,'News')">News</button>
                     <button class="ResultsTab" onclick="OpenTab(event,'SocialMedia')">Social Media</button>
                     <button class="ResultsTab" onclick="OpenTab(event,'DataBreaches')">Breaches</button>
-                    <button class="ResultsTab" onclick="OpenTab(event,'Businesses')">Property</button>
+                    <button class="ResultsTab" onclick="OpenTab(event,'Businesses')">Businesses</button>
                 </div>
                 <div id="News" class="ResultsTabContent">
                     <ul id="NewsResults">
@@ -505,7 +511,10 @@
 
                 </div>
                 <div id="Businesses" class="ResultsTabContent">
-                    <!--Results for companiesHouse appear here-->
+                    <ul id="BusinessesResults">
+                        <!--Results for companiesHouse appear here-->
+                    </ul>
+                    
 
                 </div>
             </div>
