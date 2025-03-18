@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ResultsContainer.innerHTML = `
                     <img class="IndividualResultsIcon" src="${entry.logo}" alt="${entry.APIType}">
                     <span class="IndividualResultsContent">${entry.content}</span>
-                    <button class="IndividualResultConfirmButton">How Can I fix?</button>
+                    <button class="IndividualResultConfirmButton">How Can I Fix?</button>
                     <div class="FixHintBubble" style="display: none;"></div>
                 `;
 
