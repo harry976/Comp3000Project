@@ -9,13 +9,13 @@ class UserInformation(models.Model):
     Married = models.BooleanField(default=False) # not in use
     Email = models.EmailField()
     PhoneNumber = models.CharField(max_length=15)
+    FacebookID = models.CharField(max_length=100, blank=False, null=False)
+    TwitterID = models.CharField(max_length=100, blank=False, null=False)
+    LinkedinUsername = models.CharField(max_length=100, blank=False, null=False)
 
     # Optional fields
     Address = models.TextField(max_length=128, blank=True, null=True)
     OtherName = models.CharField(max_length=100, blank=True, null=True) # not in use
-    FacebookID = models.CharField(max_length=100, blank=True, null=True)
-    TwitterID = models.CharField(max_length=100, blank=True, null=True)
-    LinkedinUsername = models.CharField(max_length=100, blank=True, null=True)
     CriminalRecord = models.BooleanField(default=False, null=True) # not in use
     OwnProperty = models.BooleanField(default=False, null=True)
     Sex = models.CharField(max_length=6, choices=[('Male', 'Male'), ('Female', 'Female')], blank=True, null=True) # not in use
