@@ -29,12 +29,81 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             //call hint bubble listener
             FixHintListener();
-            //calculate score
-            const EntryCount = EntriesFromDB.length;
-            const UserScore = 100 - EntryCount;
+            //define weightings to use in score
+            const Weightings = {
+                "CompaniesHouse": 4,
+                "Google": 1,
+                "HaveIBeenPwned": 5,
+                "News": 2,
+                "Reddit": 1,
+                "GitHub": 1,
+                "Twitter": 3,
+                "LinkedIn": 2,
+                "Facebook": 3,
 
+            };
+            //calculate score using weighting
+            let TotalWeight = 0;
+            EntriesFromDB.forEach(i => {
+                const EntryType = i.APIType;
+                const Weight = Weightings[EntryType] || 1;
+                TotalWeight += Weight;
+
+            });
+            const UserScore = Math.max(100 - TotalWeight, 0); // ensures the score stays between 0 and 100
             const DynamicScoreDisplay = document.getElementById("ScoreNumber");
+            const DynamicScoreCircle = document.getElementById("DisplayCircle");
+            const DynamicScoreOutOf = document.getElementById("OutOfHundred");
+            if (UserScore > 95) {
+                //green circle
+                DynamicScoreDisplay.style.color = "#28a745";
+                DynamicScoreCircle.style.borderColor = "#28a745";
+                DynamicScoreOutOf.style.color = "#28a745";
+            }
+            else if (UserScore <= 95 && UserScore >= 80) {
+
+                DynamicScoreDisplay.style.color = "#ff8000";
+                DynamicScoreCircle.style.borderColor = "#ff8000";
+                DynamicScoreOutOf.style.color = "#ff8000";
+                //amber circle
+            }
+            else {
+                DynamicScoreDisplay.style.color = "#FF4C4C";
+                DynamicScoreCircle.style.borderColor = "#FF4C4C";
+                DynamicScoreOutOf.style.color = "#FF4C4C";
+                //red circle
+            }
+            
             DynamicScoreDisplay.textContent = UserScore
+
+            const PreviousScanResult = await GetPreviousScore();
+            SetPreviousScore(UserScore);
+
+            const ScoreDifference = UserScore - PreviousScanResult;
+            let message = "";
+            let colour = "";
+            if (ScoreDifference < 0) {
+                //text equals score difference decreased
+                message = `Your score has increased by ${Math.abs(ScoreDifference)}, keep scanning and work at it!`;
+                colour = "#FF4C4C";
+
+            }
+            else if (ScoreDifference > 0) {
+                //text equals score difference improved
+                message = `Your score has decreased by ${Math.abs(ScoreDifference)}, keep it up!`;
+                colour = "#28a745";
+            }
+            else {
+                //score not changed
+                message = "Your score has remained the same";
+                colour = "black"
+            }
+            const ScoreDisplayBox = document.getElementById("ScoreCompare");
+            ScoreDisplayBox.textContent = message;
+            ScoreDisplayBox.style.color = colour;
+            ScoreDisplayBox.style.display = "block";
+
+
         }
         catch (error) {
             console.error("Error fetching entries:", error);
@@ -75,5 +144,24 @@ function FixHintListener() {
             });
             document.getElementById("HintOverlay").style.display = "none";
         }
+    });
+}
+
+async function GetPreviousScore() {
+    const response = await fetch("/GetPreviousScore/");
+    const data = await response.json();
+
+    if (data.PreviousScore !== null) {
+        return data.PreviousScore;
+    }
+    else return null;
+
+}
+
+async function SetPreviousScore(UserScore) {
+    await fetch('/SetPreviousScore/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({PreviousScore: UserScore})
     });
 }

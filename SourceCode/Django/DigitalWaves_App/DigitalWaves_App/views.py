@@ -373,6 +373,25 @@ def RetrieveEntriesFromDB(request):
     return JsonResponse({"entries": EntriesFromDBArray})
 
 @login_required
+def GetPreviousScore(request):
+    UserInfo = UserInformation.objects.get(user=request.user)
+    UserPreviousScore = UserInfo.PreviousScore
+
+    return JsonResponse({"PreviousScore": UserPreviousScore});
+
+@login_required
+@csrf_exempt
+def SetPreviousScore(request):
+    #get new score and save it to the database
+    if request.method == "POST":
+        NewScoreData = json.loads(request.body)
+        NewScore = NewScoreData.get("PreviousScore")
+        UserInformationDB = UserInformation.objects.get(user=request.user)
+        UserInformationDB.PreviousScore = NewScore
+        UserInformationDB.save()
+        return JsonResponse({"message": "Score Updated"});
+
+@login_required
 def GetFixHint(request, APIType):
     try:
         RelevantHint = HowToFixCategories.objects.get(APIType=APIType)

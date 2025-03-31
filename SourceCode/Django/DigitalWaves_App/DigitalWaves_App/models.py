@@ -19,6 +19,7 @@ class UserInformation(models.Model):
     CriminalRecord = models.BooleanField(default=False, null=True) # not in use
     OwnProperty = models.BooleanField(default=False, null=True)
     Sex = models.CharField(max_length=6, choices=[('Male', 'Male'), ('Female', 'Female')], blank=True, null=True) # not in use
+    PreviousScore = models.IntegerField(default=False, null=True)
 
     def __str__(self):
         return f"{self.user.username}'s Profile"

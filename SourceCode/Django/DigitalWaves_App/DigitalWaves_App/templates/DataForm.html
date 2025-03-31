@@ -121,20 +121,21 @@
                     <h3>Required</h3>
                     {{ form.Name }}
                     {{ form.DOB }}
-                    <label>
-                        <span>Married:</span>
-                        {{ form.Married }}
-                    </label>
+
                     {{ form.Email }}
                     {{ form.PhoneNumber }}
+                    {{ form.FacebookID }}
+                    {{ form.TwitterID }}
+                    {{ form.LinkedinUsername }}
                 </div>
                 <div class="OptionalForm">
                     <h3>Optional</h3>
                     {{ form.Address }}
                     {{ form.OtherName }}
-                    {{ form.FacebookID }}
-                    {{ form.TwitterID }}
-                    {{ form.LinkedinUsername }}
+                    <label>
+                        <span>Married:</span>
+                        {{ form.Married }}
+                    </label>
                     <label>
                         <span>Criminal Record:</span>
                         {{ form.CriminalRecord }}

@@ -428,6 +428,12 @@
     .ButtonBounce {
         animation: bounce 1s infinite;
     }
+    .ScoreCompare {
+        position: relative;
+        align-content: center;
+       
+
+    }
 
 
 </style>
@@ -523,10 +529,12 @@
         <div class="ScoreSection">
             <h2>Check Your Score</h2>
             <div class="DisplayScore">
-                <div class="DisplayCircle">
+                <div class="DisplayCircle" id="DisplayCircle">
                     <span id="ScoreNumber">-</span>
-                    <small>/100</small>
+                    <small id="OutOfHundred">/100</small>
                 </div>
+            </div>
+            <div id="ScoreCompare" class="ScoreCompare">
             </div>
             <div id="ScoreBreakdown" class="ScoreBreakdown">
                 <h3>Score Breakdown</h3>
