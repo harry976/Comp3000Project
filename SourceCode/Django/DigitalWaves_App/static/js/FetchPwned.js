@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ScanButton.addEventListener("click", async () => {
         try {
+            resultsContainer.innerHTML = "";
             const response = await fetch("/FetchPwned/"); // Call the view
             const data = await response.json(); // Parse JSON response
             if (data.UserPwnedData && data.UserPwnedData.length > 0) {
+                
                 data.UserPwnedData.forEach((breach) => {
                     //start to add into dynamic template
                     //dynamically create new container - main container from main page css
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } catch (error) {
             console.error("Error fetching Pwned:", error);
-            resultsContainer.innerHTML = "<p>Something went wrong fetching Reddit data. Please try again later.</p>";
+            resultsContainer.innerHTML = "<p>Something went wrong fetching Breaches data. Please try again later.</p>";
         }
     });
 });

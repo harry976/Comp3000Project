@@ -11,7 +11,7 @@ class UserInformationForm(forms.ModelForm):
         ]
         widgets = {
             'Name': forms.TextInput(attrs={'placeholder': 'Full Name'}),
-            'DOB': forms.DateInput(attrs={'placeholder': 'MM/DD/YYYY'}),
+            'DOB': forms.DateInput(format='%d/%m/%Y', attrs={'placeholder': 'DD/MM/YYYY'}),
             'Email': forms.EmailInput(attrs={'placeholder': 'Email Address'}),
             'PhoneNumber': forms.TextInput(attrs={'placeholder': 'Phone Number'}),
             'Address': forms.Textarea(attrs={'placeholder': 'Enter your address'}),
@@ -20,6 +20,11 @@ class UserInformationForm(forms.ModelForm):
             'TwitterID': forms.TextInput(attrs={'placeholder': 'Your Twitter Username'}),
             'LinkedinUsername': forms.TextInput(attrs={'placeholder': 'LinkedIn Username'}),
             }
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['DOB'].input_formats = ['%d/%m/%Y']
+        
+
 
 
 

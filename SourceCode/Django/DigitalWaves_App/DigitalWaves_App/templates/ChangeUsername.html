@@ -19,6 +19,7 @@
     }
 
     .Username-container {
+        position: relative;
         text-align: center;
         padding: 20px;
         border-radius: 10px;
@@ -49,7 +50,7 @@
         .Username-container button {
             width: 30%;
             padding: 10px;
-            background-color: #007bff;
+            background-color: #046A88;
             border: none;
             border-radius: 5px;
             margin-bottom: 15px;
@@ -59,7 +60,7 @@
         }
 
             .Username-container button:hover {
-                background-color: #0056b3;
+                background-color: #035B74;
             }
 
         .Username-container a {
@@ -77,6 +78,31 @@
             background-color: white;
             width: 200px;
         }
+    .Username-container .back-button {
+        position: absolute;
+        top: 10px;
+        left: 1px;
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 15px;
+        color: black;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .Username-container .back-button::before {
+        content: '';
+        display: inline-block;
+        margin-right: 10px;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        padding: 6px;
+        transform: rotate(135deg);
+    }
 </style>
 <body>
     <div class="Username-container">
@@ -96,6 +122,7 @@
             <input type="text" name="NewUsername" placeholder="New Username" required>
             <button type="submit">Confirm</button>
         </form>
+        <a href="{% url 'MainPage' %}" class="back-button">Back</a>
 
     </div>
 

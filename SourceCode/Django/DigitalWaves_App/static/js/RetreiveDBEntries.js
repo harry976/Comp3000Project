@@ -78,30 +78,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const PreviousScanResult = await GetPreviousScore();
             SetPreviousScore(UserScore);
+            if (PreviousScanResult != 0) {
+                const ScoreDifference = UserScore - PreviousScanResult;
+                let message = "";
+                let colour = "";
+                if (ScoreDifference < 0) {
+                    //text equals score difference decreased
+                    message = `Your score has increased by ${Math.abs(ScoreDifference)}, keep scanning and work at it!`;
+                    colour = "#FF4C4C";
 
-            const ScoreDifference = UserScore - PreviousScanResult;
-            let message = "";
-            let colour = "";
-            if (ScoreDifference < 0) {
-                //text equals score difference decreased
-                message = `Your score has increased by ${Math.abs(ScoreDifference)}, keep scanning and work at it!`;
-                colour = "#FF4C4C";
-
+                }
+                else if (ScoreDifference > 0) {
+                    //text equals score difference improved
+                    message = `Your score has decreased by ${Math.abs(ScoreDifference)}, keep it up!`;
+                    colour = "#28a745";
+                }
+                else {
+                    //score not changed
+                    message = "Your score has remained the same";
+                    colour = "black"
+                }
+                const ScoreDisplayBox = document.getElementById("ScoreCompare");
+                ScoreDisplayBox.textContent = message;
+                ScoreDisplayBox.style.color = colour;
+                ScoreDisplayBox.style.display = "block";
             }
-            else if (ScoreDifference > 0) {
-                //text equals score difference improved
-                message = `Your score has decreased by ${Math.abs(ScoreDifference)}, keep it up!`;
-                colour = "#28a745";
-            }
-            else {
-                //score not changed
-                message = "Your score has remained the same";
-                colour = "black"
-            }
-            const ScoreDisplayBox = document.getElementById("ScoreCompare");
-            ScoreDisplayBox.textContent = message;
-            ScoreDisplayBox.style.color = colour;
-            ScoreDisplayBox.style.display = "block";
+            
 
 
         }

@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const response = await fetch("/FetchNews/"); // Call the view
             const data = await response.json(); // Parse JSON response
             if (data.articles && data.articles.length > 0) {
+                resultsContainer.innerHTML = "";
                 data.articles.forEach((article) => {
 
                     //start to add into dynamic template

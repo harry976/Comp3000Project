@@ -17,10 +17,10 @@ from .forms import UserInformationForm
 from .models import UserInformation
 from .models import ConfirmedResultsEntries
 from .models import HowToFixCategories
+from django.views.decorators.cache import never_cache
 
 
-
-
+@login_required
 def FetchNews(request):
     user_info = UserInformation.objects.get(user=request.user)
     full_name = user_info.Name
@@ -145,13 +145,14 @@ def FetchGoogleCompaniesHouse(request):
         GoogleResults.extend(data["items"])
     return JsonResponse({"GoogleResults": GoogleResults})
 
+@never_cache
 @login_required
 def MainPage(request):
     #clear results entries when main page loads
     ConfirmedResultsEntries.objects.filter(user=request.user).delete()
     return render(request, 'MainPage.html')
 
-
+@never_cache
 @login_required
 def DataForm(request):
     print("entered view. success")
@@ -187,6 +188,7 @@ def DataForm(request):
 
     return render(request, "DataForm.html", {'form': UserDataForm})
 
+@never_cache
 @csrf_exempt
 @login_required
 def DeleteOptionalData(request):
@@ -195,28 +197,34 @@ def DeleteOptionalData(request):
     except UserInformation.DoesNotExist:
         ExistingUserData = None
         success = False
+        return JsonResponse({'success': False, 'message': 'No optional information found to delete'})
     if request.method == "POST":
         if ExistingUserData:
             ExistingUserData.Address = None
             ExistingUserData.OtherName = None
-            ExistingUserData.FacebookID = None
-            ExistingUserData.TwitterID = None
-            ExistingUserData.LinkedinUsername = None
+            #ExistingUserData.FacebookID = None
+            #ExistingUserData.TwitterID = None
+            #ExistingUserData.LinkedinUsername = None
             ExistingUserData.CriminalRecord = None
+            ExistingUserData.Married = False
             ExistingUserData.OwnProperty = None
             ExistingUserData.Sex = None
             ExistingUserData.save()
             success = True
 
-    return JsonResponse({'success': success})
+        return JsonResponse({'success': True, 'message': 'Optional data successfully deleted'})
+    return JsonResponse({'success': False, 'message': 'Invalid request method'})
 
-
+@never_cache
 @login_required
 def LogoutView(request):
     logout(request)
+    request.session.flush()
     return redirect('Login')
     
-
+@login_required
+def SessionCheck(request):
+    return JsonResponse({'status': 'ok'})
 
 def LoginView(request):
     if request.method == 'POST':
@@ -244,12 +252,20 @@ def RegistrationView(request):
             messages.error(request, "Usernames do not match")
             return render(request, 'RegistrationPage.html')
 
+        #ensure username does not already exist
+        if User.objects.filter(username=username).exists():
+            messages.error(request, "User already exists")
+            return render(request, 'RegistrationPage.html')
+
         if password != ConfirmPassword:
             messages.error(request, "Passwords do not match")
             return render(request, 'RegistrationPage.html')
 
         if len(password) < 8:
             messages.error(request, "Passwords must be more than 8 characters")
+            return render(request, 'RegistrationPage.html')
+        if not any(char.isupper() for char in password):
+            messages.error(request, "Passwords must have at least 1 uppercase letter")
             return render(request, 'RegistrationPage.html')
 
         if not any(char.isdigit() for char in password):
@@ -260,10 +276,7 @@ def RegistrationView(request):
             messages.error(request, "Passwords must contain at least 1 special character")
             return render(request, 'RegistrationPage.html')
 
-        #ensure username does not already exist
-        if User.objects.filter(username=username).exists():
-            messages.error(request, "User already exists")
-            return render(request, 'RegistrationPage.html')
+        
 
         #add data into the database
         user = User.objects.create_user(username=username, password=password)
@@ -271,11 +284,10 @@ def RegistrationView(request):
         logout(request)
         login(request, user)
 
-        messages.success(request, "registration successful")
         return redirect('DataForm')
     return render(request, 'RegistrationPage.html')
 
-
+@never_cache
 @login_required
 def ChangeUsernameView(request):
     if request.method == 'POST': 
@@ -297,27 +309,50 @@ def ChangeUsernameView(request):
         return redirect('Login')
     return render(request, 'ChangeUsername.html')
     
-
+@never_cache
 @login_required
 def ChangePasswordView(request):
     if request.method == 'POST':
         ExistingPassword = request.POST.get("ExistingPassword")
         NewPassword = request.POST.get("NewPassword")
         ConfirmPassword = request.POST.get("ConfirmPassword")
-        if NewPassword != ConfirmPassword:
-            messages.error(request,"New Passwords Do Not Match")
-            return render(request, "ChangePassword.html")
+
         if request.user.check_password(ExistingPassword) == False:
             messages.error(request, "Existing Password Does Not Match Account")
             return render(request, "ChangePassword.html")
+
+        if ExistingPassword == NewPassword:
+            messages.error(request, "New password must be different to existing password")
+            return render(request, 'ChangePassword.html')
+
+        if NewPassword != ConfirmPassword:
+            messages.error(request, "Passwords do not match")
+            return render(request, 'ChangePassword.html')
+
+        if len(NewPassword) < 8:
+            messages.error(request, "Passwords must be more than 8 characters")
+            return render(request, 'ChangePassword.html')
+
+        if not any(char.isupper() for char in NewPassword):
+            messages.error(request, "Passwords must have at least 1 uppercase letter")
+            return render(request, 'ChangePassword.html')
+
+        if not any(char.isdigit() for char in NewPassword):
+            messages.error(request, "Passwords must contain at least 1 number")
+            return render(request, 'ChangePassword.html')
+
+        if not any(char in string.punctuation for char in NewPassword):
+            messages.error(request, "Passwords must contain at least 1 special character")
+            return render(request, 'ChangePassword.html')  
+
         request.user.set_password(NewPassword)
         request.user.save()
         logout(request)
-        messages.success(request,"Password Changed Successfully")
+        messages.success(request,"Password Changed Successfully. Please log in")
         return redirect('Login')    
     return render(request, 'ChangePassword.html')
 
-
+@never_cache
 @login_required
 def DeleteAccountView(request):
     if request.method == 'POST':
@@ -335,7 +370,7 @@ def DeleteAccountView(request):
     return render(request, 'DeleteAccount.html')
 
 
-
+@never_cache
 @login_required
 @csrf_exempt
 def SaveEntryToDB(request):  
@@ -358,6 +393,7 @@ def SaveEntryToDB(request):
          except Exception as error:
             return JsonResponse({"status": "error", "message": str(error)})
 
+@never_cache
 @login_required
 def RetrieveEntriesFromDB(request):
     #retrieve entries
@@ -372,6 +408,7 @@ def RetrieveEntriesFromDB(request):
         })
     return JsonResponse({"entries": EntriesFromDBArray})
 
+@never_cache
 @login_required
 def GetPreviousScore(request):
     UserInfo = UserInformation.objects.get(user=request.user)
@@ -379,6 +416,7 @@ def GetPreviousScore(request):
 
     return JsonResponse({"PreviousScore": UserPreviousScore});
 
+@never_cache
 @login_required
 @csrf_exempt
 def SetPreviousScore(request):
@@ -391,6 +429,7 @@ def SetPreviousScore(request):
         UserInformationDB.save()
         return JsonResponse({"message": "Score Updated"});
 
+@never_cache
 @login_required
 def GetFixHint(request, APIType):
     try:

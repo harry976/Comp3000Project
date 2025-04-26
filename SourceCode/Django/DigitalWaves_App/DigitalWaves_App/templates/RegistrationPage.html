@@ -97,6 +97,32 @@
             padding: 6px;
             transform: rotate(135deg);
         }
+    .PasswordContainer {
+        position: relative;
+    }
+
+    .password-tip {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        color: #333;
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 5px;
+        width: 280px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        z-index: 10;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .PasswordContainer:focus-within .password-tip {
+        display: block;
+    }
        
 </style>
 <body>
@@ -115,7 +141,14 @@
             {% csrf_token %}
             <input type="text" name="username" placeholder="Username" required>
             <input type="text" name="ConfirmUsername" placeholder="Confirm Username" required>
-            <input type="password" name="password" placeholder="Password" required>
+
+            <div class="PasswordContainer">
+                <input type="password" name="password" placeholder="Password" required>
+                <div class="password-tip">
+                    Password must be at least 8 characters long, include an uppercase letter, a number, and a special character.
+                </div>
+            </div>
+            
             <input type="password" name="ConfirmPassword" placeholder="Confirm Password" required>
             <button type="submit">Register</button>
         </form>

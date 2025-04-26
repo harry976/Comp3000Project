@@ -41,5 +41,6 @@ urlpatterns = [
     path('DeleteOptionalData/', views.DeleteOptionalData, name="DeleteOptionalData"),
     path('FetchCompaniesHouse/', views.FetchGoogleCompaniesHouse, name="FetchCompaniesHouse"),
     path('GetPreviousScore/', views.GetPreviousScore, name="GetPreviousScore"),
-    path('SetPreviousScore/', views.SetPreviousScore, name="SetPreviousScore")
+    path('SetPreviousScore/', views.SetPreviousScore, name="SetPreviousScore"),
+    path('SessionCheck/', views.SessionCheck, name='SessionCheck')
 ]

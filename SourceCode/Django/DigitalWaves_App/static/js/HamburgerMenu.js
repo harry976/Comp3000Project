@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
     /* Hamburger menu buttons into variables */
     const InformationWizardButton = document.querySelector(".InformationWizardButton");
     const SideMenuContent = document.getElementById("SideMenu");
+    const ClickableOverlay = document.querySelector(".Overlay");
+    const CheckBox = document.getElementById("check");
+    ClickableOverlay.addEventListener("click", function () {
+        CheckBox.checked = false;
+        LoadMainMenu();
+    });
 
     /*code to load the main menu page */
     function LoadMainMenu() {
@@ -13,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="/DataForm/">
                 <button type="button" class="InformationWizardButton">Information Wizard</button>
             </a>
-            <a href="/login/">
+            <a href="/logout/">
                 <button type="button" class="LogoutButton">Log Out</button>
             </a>              
         `;
@@ -78,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
         /*calls the listener for the back button */
         BackButtonListener();
+        MainBackButtonListener();
     }
 
     /*HTML code for Account Settings page*/
@@ -104,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
         /*calls the listener for the back button */
         BackButtonListener();
         DeleteOptionalInformationButtonListener();
+        MainBackButtonListener();
     }
 
 
@@ -145,6 +153,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 })
                 .catch(error => console.error("error:", error));
+        });
+    }
+    function MainBackButtonListener() {
+        const CloseButton = document.querySelector(".closebtn");
+        CloseButton.addEventListener("click", function () {
+            CheckBox.checked = false;
+            LoadMainMenu();
         });
     }
     

@@ -17,6 +17,7 @@
     <script src="{% static 'js/ConfirmButtonListeners.js' %}"></script>
     <script src="{% static 'js/RetreiveDBEntries.js' %}"></script>
     <script src="{% static 'js/FetchCompaniesHouse.js' %}"></script>
+    <script src="{% static 'js/CheckSession.js' %}"></script>
 </head>
 <style>
     body {
@@ -49,6 +50,7 @@
         padding: 20px;
         width: 50%;
         border-radius: 10px;
+        max-height:100vh;
     }
 
         .ScanSection h2, .ScoreSection h2 {
@@ -131,8 +133,9 @@
     .ScoreEntries{
         overflow-y: auto;
         overflow-x: hidden;
-        max-height: 600px;
+        max-height: 550px;
         padding-top: 10px;
+        padding-bottom: 10px;
 
     }
     .ScoreBreakdown h3 {
@@ -219,7 +222,7 @@
     .FAQBody {
         color: black;
         font-size: 20px;
-        padding: 10px, 3px, 10px, 3px;
+        padding: 10px 10px 10px 10px;
         overflow-x: hidden;
         overflow-y: auto;
         border: none;
@@ -312,6 +315,7 @@
         max-height: none;
     }
     .IndividualResultsContainer {
+        position: relative;
         display: flex;
         align-items: center;
         width: 100%;
@@ -368,7 +372,9 @@
 
     .FixHintBubble {
         display: none;
-        position: absolute;
+        position: fixed;
+        top: 40%;
+        left: 53%;
         background-color: #f9f9f9;
         max-width: 300px;
         border: 1px solid #ddd;
@@ -458,7 +464,7 @@
              ChangePasswordURL="{% url 'ChangePassword' %}"
              DeleteAccountURL="{% url 'DeleteAccount' %}">
         </div>
-        <form method="POST" action="{% url 'Login' %}">
+        <form method="POST" action="{% url 'Logout' %}">
             {% csrf_token %}
             <button type="submit" class="LogoutButton">Log Out</button>
         </form>
